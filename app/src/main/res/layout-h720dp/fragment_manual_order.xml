@@ -1,0 +1,118 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".login.fragments.EnterDetailsFragment">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_16"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.fameget.dreamgroceries.customviews.CFTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_16"
+        android:text="@string/manual_order"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/txt_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+
+        android:overScrollMode="never"
+        android:paddingBottom="@dimen/dp_8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+        <LinearLayout
+            android:id="@+id/llAddView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp_8">
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.fameget.dreamgroceries.customviews.CFTextView
+        android:id="@+id/tvAddMoreItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_24"
+        android:text="@string/add_more_items"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/txt_14"
+        app:layout_constraintTop_toBottomOf="@id/scrollView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiAddInst"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:hint="@string/add_inst"
+        android:textColorHint="@color/colorAccent"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@id/viewNext"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.fameget.dreamgroceries.customviews.CFEditText
+            android:id="@+id/edtFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="start|top"
+            android:inputType="textCapSentences"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/txt_14" />
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <View
+
+        android:id="@+id/viewNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_hgt"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:background="@drawable/btn_grn_bg"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.fameget.dreamgroceries.customviews.CFTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_btn"
+        app:layout_constraintBottom_toBottomOf="@id/viewNext"
+        app:layout_constraintEnd_toEndOf="@id/viewNext"
+        app:layout_constraintStart_toStartOf="@id/viewNext"
+        app:layout_constraintTop_toTopOf="@id/viewNext" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

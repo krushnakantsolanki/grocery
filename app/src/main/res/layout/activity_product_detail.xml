@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rvMain"
+    android:layout_width="400dp"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ProductDetailFragment">
+
+
+    <LinearLayout
+        android:id="@+id/llAnchor"
+        android:layout_width="400dp"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"></LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/conMain"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignStart="@id/llAnchor"
+        android:layout_alignEnd="@id/llAnchor"
+        android:layout_alignBottom="@id/llAnchor"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_product_detail"
+        android:padding="@dimen/dp_16">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:src="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp_24"
+            app:layout_constraintBottom_toTopOf="@id/btnAdd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivProduct"
+                    android:layout_width="@dimen/product_size"
+                    android:layout_height="@dimen/product_size"
+                    android:src="@drawable/temp1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp_24"
+                    android:text="Pizza Margherita (more commonly known in English as Margherita pizza) is a typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt and extra-virgin olive oil."
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/txt_16"
+                    app:layout_constraintTop_toBottomOf="@id/ivProduct" />
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$ 5.00"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/txt_14"
+                    app:fontName="@string/font_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle"></com.fameget.dreamgroceries.customviews.CFTextView>
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:id="@+id/tvDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp_16"
+                    android:text="In 1866 Francesco De Bourcard, writing about the Naples traditions,[5] described the most commonly used pizza toppings at that time, included the ones called today pizza marinara, pizza margherita and calzone:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/txt_12"
+                    app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <com.fameget.dreamgroceries.customviews.CFButton
+            android:id="@+id/btnAdd"
+            style="@style/my_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+
+            android:paddingStart="@dimen/dp_24"
+            android:paddingEnd="@dimen/dp_24"
+            android:text="@string/add_to_cart"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/ivAdd"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+
+            android:layout_marginEnd="@dimen/dp_24"
+            android:src="@drawable/ic_plus"
+            app:layout_constraintBottom_toBottomOf="@id/btnAdd"
+            app:layout_constraintEnd_toStartOf="@id/btnAdd"
+            app:layout_constraintTop_toTopOf="@id/btnAdd" />
+
+        <com.fameget.dreamgroceries.customviews.CFTextView
+            android:id="@+id/tvCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_24"
+            android:paddingEnd="@dimen/dp_24"
+            android:text="2"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/txt_20"
+            app:fontName="@string/font_bold"
+            app:layout_constraintBottom_toBottomOf="@id/btnAdd"
+            app:layout_constraintEnd_toStartOf="@id/ivAdd"
+            app:layout_constraintTop_toTopOf="@id/btnAdd" />
+
+        <ImageView
+            android:id="@+id/ivSub"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:src="@drawable/ic_remove"
+            app:layout_constraintBottom_toBottomOf="@id/btnAdd"
+            app:layout_constraintEnd_toStartOf="@id/tvCount"
+            app:layout_constraintTop_toTopOf="@id/btnAdd" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

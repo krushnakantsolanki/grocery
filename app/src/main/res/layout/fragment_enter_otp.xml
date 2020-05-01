@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".login.fragments.EnterOtpFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideHor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15"></androidx.constraintlayout.widget.Guideline>
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_16"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.fameget.dreamgroceries.customviews.CFTextView
+        android:id="@+id/tvEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:text="@string/enter_code"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/txt_18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideHor" />
+
+
+    <LinearLayout
+        android:id="@+id/pin_layout"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEnter">
+
+
+        <com.fameget.dreamgroceries.customviews.CFEditText
+            android:id="@+id/pin_first_edittext"
+            style="@style/pin_edittext_style"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pin_width"
+            android:layout_marginEnd="@dimen/dp_8" />
+
+        <com.fameget.dreamgroceries.customviews.CFEditText
+            android:id="@+id/pin_second_edittext"
+            style="@style/pin_edittext_style"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pin_width"
+            android:layout_marginEnd="@dimen/dp_8" />
+
+        <com.fameget.dreamgroceries.customviews.CFEditText
+            android:id="@+id/pin_third_edittext"
+            style="@style/pin_edittext_style"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pin_width"
+            android:layout_marginEnd="@dimen/dp_8" />
+
+        <com.fameget.dreamgroceries.customviews.CFEditText
+            android:id="@+id/pin_forth_edittext"
+            style="@style/pin_edittext_style"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pin_width"
+            android:layout_marginEnd="@dimen/dp_8" />
+
+        <com.fameget.dreamgroceries.customviews.CFEditText
+            android:id="@+id/pin_fifth_edittext"
+            style="@style/pin_edittext_style"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pin_width"
+            android:layout_marginEnd="@dimen/dp_8" />
+
+        <com.fameget.dreamgroceries.customviews.CFEditText
+            android:id="@+id/pin_sixth_edittext"
+            style="@style/pin_edittext_style"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/pin_width" />
+    </LinearLayout>
+
+    <com.fameget.dreamgroceries.customviews.CFEditText
+        android:id="@+id/pin_hidden_edittext"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@null"
+        android:textSize="@dimen/txt_18"
+
+        android:inputType="numberPassword"
+        android:cursorVisible="false"
+        android:gravity="center_horizontal"
+        android:maxLength="6"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pin_layout" />
+
+
+    <com.fameget.dreamgroceries.customviews.CFButton
+        android:id="@+id/btnNext"
+        style="@style/my_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_24"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@id/pin_layout"
+        app:layout_constraintTop_toBottomOf="@id/pin_layout"></com.fameget.dreamgroceries.customviews.CFButton>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideHo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.fameget.dreamgroceries.customviews.CFTextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:45"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/txt_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideHo2" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTime">
+
+        <com.fameget.dreamgroceries.customviews.CFTextView
+            android:id="@+id/tvNotRecLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/did_nt_get_code"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/txt_14" />
+
+        <com.fameget.dreamgroceries.customviews.CFTextView
+            android:id="@+id/tvNotRecAct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resend_code"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/txt_14"
+            android:layout_marginStart="@dimen/dp_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTime" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

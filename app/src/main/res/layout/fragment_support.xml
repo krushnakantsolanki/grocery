@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SupportFragment">
+
+    <com.fameget.dreamgroceries.customviews.CFTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_16"
+        android:text="@string/customer_support"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/txt_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:overScrollMode="never"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="@dimen/support_logo"
+                    android:layout_height="@dimen/support_logo"
+                    android:background="@drawable/bg_support_logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:src="@drawable/ic_logo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_24"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/dp_4"
+                app:cardElevation="@dimen/dp_4">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_16">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideLineFirst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.18"></androidx.constraintlayout.widget.Guideline>
+
+
+                    <LinearLayout
+                        android:id="@+id/llDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/guideLineFirst"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <com.fameget.dreamgroceries.customviews.CFTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/store_name"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/txt_12" />
+
+                        <com.fameget.dreamgroceries.customviews.CFTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dream Groceries"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/txt_16" />
+                    </LinearLayout>
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:src="@drawable/ic_store_name"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/llDetails"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/dp_4"
+                app:cardElevation="@dimen/dp_4">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_16">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideLineSecond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.18"></androidx.constraintlayout.widget.Guideline>
+
+
+                    <LinearLayout
+                        android:id="@+id/llAddressDetails"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/guideLineSecond"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <com.fameget.dreamgroceries.customviews.CFTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/store_address"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/txt_12" />
+
+                        <com.fameget.dreamgroceries.customviews.CFTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="2"
+
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:text="600 Showers, Dr. Mountain View, CA94040, United states"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/txt_14" />
+
+                        <com.fameget.dreamgroceries.customviews.CFTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/dp_8"
+                            android:text="@string/get_directions"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/txt_12"></com.fameget.dreamgroceries.customviews.CFTextView>
+                    </LinearLayout>
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:src="@drawable/ic_address"
+                        app:layout_constraintEnd_toStartOf="@id/llAddressDetails"
+                        app:layout_constraintTop_toTopOf="@id/llAddressDetails" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_12">
+
+                <View
+                    android:id="@+id/viewCallStore"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_hgt"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:background="@drawable/btn_grn_bg"
+
+                    app:layout_constraintBottom_toTopOf="@id/viewPayLater"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/call_store"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_btn"
+                    app:layout_constraintBottom_toBottomOf="@id/viewCallStore"
+                    app:layout_constraintEnd_toEndOf="@id/viewCallStore"
+                    app:layout_constraintStart_toStartOf="@id/viewCallStore"
+                    app:layout_constraintTop_toTopOf="@id/viewCallStore" />
+
+
+                <View
+                    android:id="@+id/viewEmailStore"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_hgt"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:background="@drawable/btn_grn_bg"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewCallStore" />
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email_store"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_btn"
+                    app:layout_constraintBottom_toBottomOf="@id/viewEmailStore"
+                    app:layout_constraintEnd_toEndOf="@id/viewEmailStore"
+                    app:layout_constraintStart_toStartOf="@id/viewEmailStore"
+                    app:layout_constraintTop_toTopOf="@id/viewEmailStore" />
+
+
+                <View
+                    android:id="@+id/viewChatWith"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_hgt"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:background="@drawable/btn_grn_bg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewEmailStore" />
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chat_with"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_btn"
+                    app:layout_constraintBottom_toBottomOf="@id/viewChatWith"
+                    app:layout_constraintEnd_toEndOf="@id/viewChatWith"
+                    app:layout_constraintStart_toStartOf="@id/viewChatWith"
+                    app:layout_constraintTop_toTopOf="@id/viewChatWith" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

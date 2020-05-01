@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.ui.home.HomeFragment">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideHor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideHo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideVer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20" />
+
+
+    <com.fameget.dreamgroceries.customviews.CFTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="?android:attr/actionBarSize"
+        android:text="@string/welcome_to"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/txt_22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideHor" />
+
+    <View
+        android:id="@+id/viewDel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_hgt"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:background="@drawable/btn_grn_bg"
+        android:paddingStart="@dimen/dp_16"
+        app:layout_constraintTop_toBottomOf="@id/guideHo2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:src="@drawable/ic_create_del"
+        app:layout_constraintBottom_toBottomOf="@id/viewDel"
+        app:layout_constraintStart_toStartOf="@id/viewDel"
+        app:layout_constraintTop_toTopOf="@id/viewDel"></ImageView>
+
+    <com.fameget.dreamgroceries.customviews.CFTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:text="@string/create_delivery_order"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_btn"
+        app:layout_constraintBottom_toBottomOf="@id/viewDel"
+        app:layout_constraintStart_toStartOf="@id/guideVer"
+        app:layout_constraintTop_toTopOf="@id/viewDel" />
+
+
+    <View
+        android:id="@+id/viewPick"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_hgt"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:background="@drawable/btn_grn_bg"
+        android:paddingStart="@dimen/dp_16"
+        app:layout_constraintTop_toBottomOf="@id/viewDel" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:src="@drawable/ic_create_pick_up"
+        app:layout_constraintBottom_toBottomOf="@id/viewPick"
+        app:layout_constraintStart_toStartOf="@id/viewPick"
+        app:layout_constraintTop_toTopOf="@id/viewPick"></ImageView>
+
+    <com.fameget.dreamgroceries.customviews.CFTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:text="@string/create_pickup"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_btn"
+        app:layout_constraintBottom_toBottomOf="@id/viewPick"
+        app:layout_constraintStart_toStartOf="@id/guideVer"
+        app:layout_constraintTop_toTopOf="@id/viewPick" />
+
+
+    <com.fameget.dreamgroceries.customviews.CFTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_24"
+        android:text="@string/start_ordering"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/txt_20"
+        app:layout_constraintBottom_toTopOf="@id/guideHo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></com.fameget.dreamgroceries.customviews.CFTextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.ui.home.HomeFragment">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideHor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideHo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideVer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_16"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+
+
+
+    <View
+        android:id="@+id/viewBrowseStore"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_hgt"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:background="@drawable/btn_grn_bg"
+        android:paddingStart="@dimen/dp_16"
+        app:layout_constraintTop_toBottomOf="@id/guideHo2" />
+
+    <ImageView
+        android:id="@+id/ivBrowse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_browse_store"
+        app:layout_constraintBottom_toBottomOf="@id/viewBrowseStore"
+        app:layout_constraintEnd_toEndOf="@id/ivQuick"
+        app:layout_constraintTop_toTopOf="@id/viewBrowseStore"></ImageView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/viewBrowseStore"
+        app:layout_constraintStart_toStartOf="@id/tvQuickOrder"
+        app:layout_constraintTop_toTopOf="@id/viewBrowseStore">
+
+        <com.fameget.dreamgroceries.customviews.CFTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/browse_store_items"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_btn" />
+
+        <com.fameget.dreamgroceries.customviews.CFTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/use_shop_cart"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_10" />
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/viewQuickOrder"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_hgt"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:background="@drawable/btn_grn_bg"
+        android:paddingStart="@dimen/dp_16"
+        app:layout_constraintTop_toBottomOf="@id/viewBrowseStore" />
+
+    <ImageView
+        android:id="@+id/ivQuick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_manual_order"
+        app:layout_constraintStart_toStartOf="@id/viewQuickOrder"
+        android:layout_marginStart="@dimen/dp_16"
+        app:layout_constraintBottom_toBottomOf="@id/viewQuickOrder"
+        app:layout_constraintTop_toTopOf="@id/viewQuickOrder"></ImageView>
+
+    <com.fameget.dreamgroceries.customviews.CFTextView
+        android:id="@+id/tvQuickOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quick_manual_order"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_btn"
+        android:layout_marginStart="@dimen/dp_16"
+        app:layout_constraintBottom_toBottomOf="@id/viewQuickOrder"
+        app:layout_constraintStart_toEndOf="@id/ivQuick"
+        app:layout_constraintTop_toTopOf="@id/viewQuickOrder" />
+
+
+    <com.fameget.dreamgroceries.customviews.CFTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_40"
+        android:text="@string/how_want_to_order"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/txt_22"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@id/guideHo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></com.fameget.dreamgroceries.customviews.CFTextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

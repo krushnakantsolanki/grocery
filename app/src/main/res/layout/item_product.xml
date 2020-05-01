@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_8">-->
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_8"
+        android:background="@color/white"
+        android:elevation="@dimen/dp_8"
+
+        app:cardCornerRadius="@dimen/dp_8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_8">
+
+            <ImageView
+                android:id="@+id/ivProduct"
+                android:layout_width="@dimen/product_size"
+                android:layout_height="@dimen/product_size"
+                android:adjustViewBounds="true"
+                android:src="@drawable/temp1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <com.fameget.dreamgroceries.customviews.CFTextView
+
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:maxLines="3"
+                android:paddingTop="@dimen/dp_24"
+                android:text="This is sample description of product displayed on top."
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/txt_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivProduct" />
+
+            <com.fameget.dreamgroceries.customviews.CFTextView
+                android:id="@+id/tvQun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_2"
+                android:text="Medium Size"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/txt_10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDesc" />
+
+            <com.fameget.dreamgroceries.customviews.CFTextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_4"
+                android:text="$5.00"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/txt_14"
+                app:fontName="@string/font_bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvQun" />
+
+            <ImageView
+                android:id="@+id/ivAdd"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:src="@drawable/ic_plus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"></ImageView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!--
+    </androidx.constraintlayout.widget.ConstraintLayout>-->

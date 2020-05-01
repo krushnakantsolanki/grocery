@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include layout="@layout/nav_header_home" />
+
+    <!-- Layout Home-->
+    <RelativeLayout
+        android:id="@+id/rlHome"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_item_2"
+        android:layout_marginTop="@dimen/dp_24"
+        android:clickable="true"
+
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_half"
+            android:background="@color/white" />
+
+        <com.fameget.dreamgroceries.customviews.CFTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/drawer_item_home"
+            android:drawablePadding="@dimen/dp_16"
+            android:paddingStart="@dimen/dp_32"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+
+            android:layout_gravity="center_vertical"
+            android:text="@string/home"
+            android:textColor="@color/drawer_item"
+            android:textSize="@dimen/txt_18" />
+    </RelativeLayout>
+
+    <!-- Layout orders-->
+    <RelativeLayout
+        android:id="@+id/rlOrders"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_item_2"
+
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_half"
+            android:background="@color/white" />
+
+        <com.fameget.dreamgroceries.customviews.CFTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/drawer_item_cart"
+            android:drawablePadding="@dimen/dp_16"
+            android:paddingStart="@dimen/dp_32"
+            android:gravity="center_vertical"
+
+            android:layout_centerVertical="true"
+            android:text="@string/my_orders"
+            android:textColor="@color/drawer_item"
+            android:textSize="@dimen/txt_18" />
+    </RelativeLayout>
+
+    <!-- Layout profile-->
+    <RelativeLayout
+        android:id="@+id/rlProfile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_item_2"
+
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_half"
+            android:background="@color/white" />
+
+        <com.fameget.dreamgroceries.customviews.CFTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/drawer_item_profile"
+            android:drawablePadding="@dimen/dp_16"
+            android:paddingStart="@dimen/dp_32"
+            android:gravity="center_vertical"
+
+            android:layout_centerVertical="true"
+            android:text="@string/profile"
+            android:textColor="@color/drawer_item"
+            android:textSize="@dimen/txt_18" />
+    </RelativeLayout>
+
+    <!-- Layout support-->
+    <RelativeLayout
+        android:id="@+id/rlSupport"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_item_2"
+
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_half"
+            android:background="@color/white" />
+
+        <com.fameget.dreamgroceries.customviews.CFTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/drawer_item_support"
+            android:drawablePadding="@dimen/dp_16"
+            android:paddingStart="@dimen/dp_32"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="@string/support"
+            android:textColor="@color/drawer_item"
+            android:textSize="@dimen/txt_18" />
+    </RelativeLayout>
+
+    <!-- Layout logout-->
+    <RelativeLayout
+        android:id="@+id/rlLogout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_item_2"
+
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_half"
+            android:background="@color/white" />
+
+        <com.fameget.dreamgroceries.customviews.CFTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_logout"
+            android:drawablePadding="@dimen/dp_16"
+            android:paddingStart="@dimen/dp_32"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="@string/logout"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_18" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_half"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white" />
+
+    </RelativeLayout>
+
+</LinearLayout>

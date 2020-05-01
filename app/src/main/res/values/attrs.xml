@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="textFieldStyle" format="reference"/>
+    <attr name="customAttrFontPath" format="reference|string"/>
+
+    <declare-styleable name="CFView">
+        <attr name="fontName" format="string" />
+        <attr name="shouldTint" format="boolean" />
+        <attr name="tintColor" format="integer" />
+    </declare-styleable>
+</resources>

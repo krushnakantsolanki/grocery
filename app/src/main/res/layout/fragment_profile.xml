@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".home.ui.profile.ProfileFragment">
+
+
+    <com.fameget.dreamgroceries.customviews.CFTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_16"
+        android:text="@string/my_profile"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/txt_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_16">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1"></androidx.constraintlayout.widget.Guideline>
+
+
+            <LinearLayout
+                android:id="@+id/llDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/guideLineFirst"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/first_name"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/txt_12" />
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/txt_16" />
+            </LinearLayout>
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:src="@drawable/ic_user_name"
+                app:layout_constraintBottom_toBottomOf="@id/llDetails"
+                app:layout_constraintEnd_toStartOf="@id/llDetails"
+                app:layout_constraintTop_toTopOf="@id/llDetails" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:alpha="0.67"
+            android:background="@color/colorAccent">
+
+            ></View>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_16">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineLast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1"></androidx.constraintlayout.widget.Guideline>
+
+
+            <LinearLayout
+                android:id="@+id/llLastDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/guideLineLast"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_name"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/txt_12" />
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Doe"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/txt_16" />
+            </LinearLayout>
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:src="@drawable/ic_user_name"
+                app:layout_constraintBottom_toBottomOf="@id/llLastDetails"
+                app:layout_constraintEnd_toStartOf="@id/llLastDetails"
+                app:layout_constraintTop_toTopOf="@id/llLastDetails" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:alpha="0.67"
+            android:background="@color/colorAccent">
+
+            ></View>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_16">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1"></androidx.constraintlayout.widget.Guideline>
+
+
+            <LinearLayout
+                android:id="@+id/llEmailDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/guideLineEmail"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/txt_12" />
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="u1@users.com"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/txt_16" />
+            </LinearLayout>
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:src="@drawable/ic_email"
+                app:layout_constraintBottom_toBottomOf="@id/llEmailDetails"
+                app:layout_constraintEnd_toStartOf="@id/llEmailDetails"
+                app:layout_constraintTop_toTopOf="@id/llEmailDetails" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:alpha="0.67"
+            android:background="@color/colorAccent">
+
+            ></View>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_16">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLinePhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1"></androidx.constraintlayout.widget.Guideline>
+
+
+            <LinearLayout
+                android:id="@+id/llPhoneDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/guideLinePhone"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_number"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/txt_12" />
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="97885456435"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/txt_16" />
+            </LinearLayout>
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:src="@drawable/ic_phone"
+                app:layout_constraintBottom_toBottomOf="@id/llPhoneDetails"
+                app:layout_constraintEnd_toStartOf="@id/llPhoneDetails"
+                app:layout_constraintTop_toTopOf="@id/llPhoneDetails" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:alpha="0.67"
+            android:background="@color/colorAccent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_16">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1"></androidx.constraintlayout.widget.Guideline>
+
+
+            <LinearLayout
+                android:id="@+id/llLocationetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/guideLineLocation"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delivery_address"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/txt_12" />
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:id="@+id/tvAddAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@drawable/bg_scd_pickup"
+                    android:padding="@dimen/dp_8"
+                    android:text="@string/add"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/txt_14" />
+            </LinearLayout>
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:src="@drawable/ic_location"
+                app:layout_constraintEnd_toStartOf="@id/llLocationetails"
+                app:layout_constraintTop_toTopOf="@id/llLocationetails" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:alpha="0.67"
+            android:background="@color/colorAccent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_8">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineNot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <com.fameget.dreamgroceries.customviews.CFTextView
+                android:id="@+id/tvNot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_16"
+                android:textColor="@color/textColor"
+                android:text="@string/notification"
+                app:fontName="@string/font_bold"
+                app:layout_constraintStart_toEndOf="@id/guideLineNot"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:src="@drawable/ic_notification"
+                app:layout_constraintBottom_toBottomOf="@id/tvNot"
+                app:layout_constraintEnd_toStartOf="@id/tvNot"
+                app:layout_constraintTop_toTopOf="@id/tvNot" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16"
+                android:src="@drawable/ic_switch_on"
+                app:layout_constraintBottom_toBottomOf="@id/tvNot"
+                app:layout_constraintEnd_toEndOf="parent
+"
+                app:layout_constraintTop_toTopOf="@id/tvNot" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

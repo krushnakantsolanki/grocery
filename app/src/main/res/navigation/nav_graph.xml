@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.fameget.dreamgroceries.login.fragments.LoginFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_phoneNumberFragment"
+            app:destination="@id/phoneNumberFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/phoneNumberFragment"
+        android:name="com.fameget.dreamgroceries.login.fragments.PhoneNumberFragment"
+        android:label="fragment_phone_number"
+        tools:layout="@layout/fragment_phone_number" >
+        <action
+            android:id="@+id/action_phoneNumberFragment_to_enterOtpFragment"
+            app:destination="@id/enterOtpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/enterOtpFragment"
+        android:name="com.fameget.dreamgroceries.login.fragments.EnterOtpFragment"
+        android:label="fragment_enter_otp"
+        tools:layout="@layout/fragment_enter_otp"
+        >
+        <action
+            android:id="@+id/action_enterOtpFragment_to_enterDetailsFragment"
+            app:destination="@id/enterDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/enterDetailsFragment"
+        android:name="com.fameget.dreamgroceries.login.fragments.EnterDetailsFragment"
+        android:label="fragment_enter_details"
+        tools:layout="@layout/fragment_enter_details" >
+        <action
+            android:id="@+id/action_enterDetailsFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.fameget.dreamgroceries.home.HomeActivity"
+        android:label="app_bar_home"
+        tools:layout="@layout/app_bar_home" />
+</navigation>
