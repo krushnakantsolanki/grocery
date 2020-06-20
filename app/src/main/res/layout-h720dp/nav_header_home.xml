@@ -6,7 +6,7 @@
     android:background="@color/colorPrimary"
     android:orientation="vertical"
     android:paddingTop="@dimen/dp_56"
-    android:paddingEnd="@dimen/dp_16"
+    android:paddingEnd="@dimen/dp_24"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView

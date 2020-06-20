@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/addOrderFragment"
-        android:name="com.fameget.dreamgroceries.addorder.ui.addorder.AddOrderFragment"
+        android:name="com.fameget.dreamgroceries.addorder.fragments.AddOrderFragment"
         android:label="main_fragment"
         tools:layout="@layout/add_order_fragment">
 
@@ -24,11 +24,11 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/manualOrderFragment"
-        android:name="com.fameget.dreamgroceries.ManualOrderFragment"
+        android:name="com.fameget.dreamgroceries.addorder.fragments.ManualOrderFragment"
         android:label="fragment_manual_order"
         tools:layout="@layout/fragment_manual_order">
         <action
@@ -45,10 +45,17 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_manualOrderFragment_to_addressListFragment"
+            app:destination="@id/addressListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/schedulePickupFragment"
-        android:name="com.fameget.dreamgroceries.SchedulePickupFragment"
+        android:name="com.fameget.dreamgroceries.addorder.fragments.SchedulePickupFragment"
         android:label="fragment_schedule_pickup"
         tools:layout="@layout/fragment_schedule_pickup">
         <action
@@ -58,17 +65,31 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="product_list"
+            app:argType="string[]" />
+        <argument
+            android:name="add_inst"
+            android:defaultValue='""'
+            app:argType="string" />
+        <action
+            android:id="@+id/action_schedulePickupFragment_to_manualOrderFragment"
+            app:popUpTo="@id/manualOrderFragment" />
     </fragment>
     <fragment
         android:id="@+id/thanksFragment"
-        android:name="com.fameget.dreamgroceries.ThanksFragment"
+        android:name="com.fameget.dreamgroceries.addorder.fragments.ThanksFragment"
         android:label="fragment_thanks"
-        tools:layout="@layout/fragment_thanks" >
+        tools:layout="@layout/fragment_thanks">
 
+        <argument
+            android:name="orderNo"
+            app:argType="string"
+            android:defaultValue='""' />
     </fragment>
     <fragment
         android:id="@+id/addAddressFragment"
-        android:name="com.fameget.dreamgroceries.AddAddressFragment"
+        android:name="com.fameget.dreamgroceries.home.ui.profile.AddAddressFragment"
         android:label="fragment_add_address"
         tools:layout="@layout/fragment_add_address">
         <action
@@ -78,26 +99,43 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="product_list"
+            app:argType="string[]" />
+        <argument
+            android:name="add_inst"
+            android:defaultValue='""'
+            app:argType="string" />
+        <action
+            android:id="@+id/action_addAddressFragment_to_noDeliveryAddressFragment2"
+            app:destination="@id/noDeliveryAddressFragment2" />
 
     </fragment>
     <fragment
         android:id="@+id/productsFragment"
-        android:name="com.fameget.dreamgroceries.ProductsFragment"
+        android:name="com.fameget.dreamgroceries.addorder.fragments.ProductsFragment"
         android:label="fragment_products"
-        tools:layout="@layout/fragment_products" >
+        tools:layout="@layout/fragment_products">
         <action
             android:id="@+id/action_productsFragment_to_viewCartFragment"
             app:destination="@id/viewCartFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_productsFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/viewCartFragment"
-        android:name="com.fameget.dreamgroceries.ViewCartFragment"
+        android:name="com.fameget.dreamgroceries.addorder.fragments.ViewCartFragment"
         android:label="fragment_view_cart"
-        tools:layout="@layout/fragment_view_cart" >
+        tools:layout="@layout/fragment_view_cart">
         <action
             android:id="@+id/action_viewCartFragment_to_schedulePickupFragment"
             app:destination="@id/schedulePickupFragment"
@@ -111,34 +149,85 @@
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_viewCartFragment_to_makePaymentFragment"
             app:destination="@id/makePaymentFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_viewCartFragment_to_thanksFragment"
             app:destination="@id/thanksFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/makePaymentFragment"
-        android:name="com.fameget.dreamgroceries.MakePaymentFragment"
+        android:name="com.fameget.dreamgroceries.addorder.fragments.MakePaymentFragment"
         android:label="fragment_make_payment"
-        tools:layout="@layout/fragment_make_payment" >
+        tools:layout="@layout/fragment_make_payment">
         <action
             android:id="@+id/action_makePaymentFragment_to_thanksFragment"
             app:destination="@id/thanksFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="product_list"
+            app:argType="com.fameget.dreamgroceries.data.Product[]" />
+        <argument
+            android:name="address_id"
+            app:argType="integer" />
+        <argument
+            android:name="time"
+            app:argType="string" />
     </fragment>
+    <dialog
+        android:id="@+id/productDetailFragment"
+        android:name="com.fameget.dreamgroceries.addorder.fragments.ProductDetailFragment"
+        android:label="activity_product_detail"
+        tools:layout="@layout/activity_product_detail" />
+    <fragment
+        android:id="@+id/addressListFragment"
+        android:name="com.fameget.dreamgroceries.home.ui.profile.ui.addresslist.AddressListFragment"
+        android:label="AddressListFragment">
+        <argument
+            android:name="product_list"
+            app:argType="string[]" />
+        <argument
+            android:name="add_inst"
+            android:defaultValue='""'
+            app:argType="string" />
+        <action
+            android:id="@+id/action_addressListFragment_to_thanksFragment"
+            app:destination="@id/thanksFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/noDeliveryAddressFragment2"
+        android:name="com.fameget.dreamgroceries.NoDeliveryAddressFragment"
+        android:label="fragment_no_delivery_address"
+        tools:layout="@layout/fragment_no_delivery_address" >
+        <action
+            android:id="@+id/action_noDeliveryAddressFragment2_to_supportFragment2"
+            app:destination="@id/supportFragment2" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/supportFragment2"
+        android:name="com.fameget.dreamgroceries.home.ui.support.SupportFragment"
+        android:label="fragment_support"
+        tools:layout="@layout/fragment_support" />
 
 </navigation>

@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.45" />
+            app:layout_constraintGuide_percent="0.6" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideVer"
@@ -76,7 +76,7 @@
             app:layout_constraintTop_toTopOf="@id/llLogin" />
 
 
-        <View
+     <!--   <View
             android:id="@+id/viewGg"
             android:layout_width="match_parent"
             android:layout_height="@dimen/btn_hgt"
@@ -129,6 +129,7 @@
             app:layout_constraintTop_toTopOf="@id/viewFb"></ImageView>
 
         <com.fameget.dreamgroceries.customviews.CFTextView
+            android:id="@+id/CFTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_16"
@@ -138,6 +139,17 @@
             app:layout_constraintBottom_toBottomOf="@id/viewFb"
             app:layout_constraintStart_toStartOf="@id/guideVer"
             app:layout_constraintTop_toTopOf="@id/viewFb" />
+-->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <!--  <com.fameget.dreamgroceries.customviews.CFButton

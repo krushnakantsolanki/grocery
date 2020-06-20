@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_address"
+    app:startDestination="@id/addressListActivity">
+
+    <activity
+        android:id="@+id/addressListActivity"
+        android:name="com.fameget.dreamgroceries.home.ui.profile.AddressListActivity"
+        android:label="AddressListActivity" />
+    <activity
+        android:id="@+id/addAddressActivity"
+        android:name="com.fameget.dreamgroceries.home.ui.profile.AddAddressActivity"
+        android:label="activity_add_address"
+        tools:layout="@layout/activity_add_address" />
+</navigation>

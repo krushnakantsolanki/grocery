@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewCartFragment">
+    tools:context=".addorder.fragments.ViewCartFragment">
 
     <ImageView
         android:id="@+id/ivBack"
@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:overScrollMode="never"
-        app:layout_constraintBottom_toTopOf="@id/tvLabelFinalize"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle">
 
         <LinearLayout
@@ -73,17 +73,12 @@
                 app:fontName="@string/font_bold" />
 
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp_16"
-                android:background="@color/white"
-                android:elevation="@dimen/dp_12"
-                app:cardCornerRadius="@dimen/dp_8">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_16"
+                    android:background="@drawable/bg_my_order_item"
                     android:orientation="vertical">
 
                     <RelativeLayout
@@ -100,6 +95,7 @@
                             android:textSize="@dimen/txt_16" />
 
                         <com.fameget.dreamgroceries.customviews.CFTextView
+                            android:id="@+id/tvSubTotal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
@@ -112,8 +108,8 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/dp_1"
-                            android:alpha="0.67"
                             android:layout_alignParentBottom="true"
+                            android:alpha="0.67"
                             android:background="@color/textGray"></View>
 
                     </RelativeLayout>
@@ -132,6 +128,7 @@
                             android:textSize="@dimen/txt_16" />
 
                         <com.fameget.dreamgroceries.customviews.CFTextView
+                            android:id="@+id/tvTotalTax"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
@@ -144,8 +141,8 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/dp_1"
-                            android:alpha="0.67"
                             android:layout_alignParentBottom="true"
+                            android:alpha="0.67"
                             android:background="@color/textGray"></View>
 
                     </RelativeLayout>
@@ -165,6 +162,7 @@
                             app:fontName="@string/font_bold" />
 
                         <com.fameget.dreamgroceries.customviews.CFTextView
+                            android:id="@+id/tvTotalPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
@@ -179,7 +177,6 @@
 
                     </RelativeLayout>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
             <com.fameget.dreamgroceries.customviews.CFTextView
                 android:id="@+id/tvScdPickUpLbl"
@@ -193,17 +190,36 @@
                 android:textSize="@dimen/txt_14"
                 app:fontName="@string/font_bold" />
 
-            <com.fameget.dreamgroceries.customviews.CFTextView
-                android:id="@+id/tvScdPickUp"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_16"
-                android:background="@drawable/bg_scd_pickup"
-                android:padding="@dimen/dp_8"
-                android:text="@string/scd_pickup"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/txt_14" />
+                android:orientation="horizontal">
 
+                <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:id="@+id/tvScdPickUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:background="@drawable/bg_scd_pickup"
+                    android:padding="@dimen/dp_8"
+                    android:text="@string/scd_pickup"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/txt_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:id="@+id/tvScdValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/dp_16"
+                    android:textColor="@color/textGray"
+                    android:textSize="@dimen/txt_14"
+                    app:layout_constraintBottom_toBottomOf="@id/tvScdPickUp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvScdPickUp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <com.fameget.dreamgroceries.customviews.CFTextView
                 android:id="@+id/tvAChooseAddress"
@@ -233,9 +249,83 @@
                 android:layout_marginTop="@dimen/dp_8"
                 android:background="@drawable/bg_scd_pickup"
                 android:padding="@dimen/dp_8"
-                android:text="@string/add_new_address"
+                android:text="@string/change_address"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/txt_14" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:id="@+id/tvLabelFinalize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_16"
+                    android:text="@string/finalize_order"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/txt_14"
+                    app:fontName="@string/font_bold"
+                    app:layout_constraintBottom_toTopOf="@id/viewPayNow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/viewPayNow"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_hgt"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:background="@drawable/btn_grn_bg"
+
+                    app:layout_constraintBottom_toTopOf="@id/viewPayLater"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pay_now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_btn"
+                    app:layout_constraintBottom_toBottomOf="@id/viewPayNow"
+                    app:layout_constraintEnd_toEndOf="@id/viewPayNow"
+                    app:layout_constraintStart_toStartOf="@id/viewPayNow"
+                    app:layout_constraintTop_toTopOf="@id/viewPayNow" />
+
+
+                <View
+                    android:id="@+id/viewPayLater"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_hgt"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:background="@drawable/btn_grn_bg"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.fameget.dreamgroceries.customviews.CFTextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pay_later"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_btn"
+                    app:layout_constraintBottom_toBottomOf="@id/viewPayLater"
+                    app:layout_constraintEnd_toEndOf="@id/viewPayLater"
+                    app:layout_constraintStart_toStartOf="@id/viewPayLater"
+                    app:layout_constraintTop_toTopOf="@id/viewPayLater" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </LinearLayout>
@@ -243,71 +333,16 @@
 
     </androidx.core.widget.NestedScrollView>
 
-
-    <com.fameget.dreamgroceries.customviews.CFTextView
-        android:id="@+id/tvLabelFinalize"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/dp_16"
-        android:paddingBottom="@dimen/dp_16"
-        android:text="@string/finalize_order"
-        android:textColor="@color/textColor"
-        android:textSize="@dimen/txt_14"
-        app:fontName="@string/font_bold"
-        app:layout_constraintBottom_toTopOf="@id/viewPayNow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <View
-        android:id="@+id/viewPayNow"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/btn_hgt"
-        android:layout_marginStart="@dimen/dp_16"
-        android:layout_marginEnd="@dimen/dp_16"
-        android:layout_marginBottom="@dimen/dp_16"
-        android:background="@drawable/btn_grn_bg"
-
-        app:layout_constraintBottom_toTopOf="@id/viewPayLater"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.fameget.dreamgroceries.customviews.CFTextView
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pay_now"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="@dimen/txt_btn"
-        app:layout_constraintBottom_toBottomOf="@id/viewPayNow"
-        app:layout_constraintEnd_toEndOf="@id/viewPayNow"
-        app:layout_constraintStart_toStartOf="@id/viewPayNow"
-        app:layout_constraintTop_toTopOf="@id/viewPayNow" />
-
-
-    <View
-        android:id="@+id/viewPayLater"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/btn_hgt"
-        android:layout_marginStart="@dimen/dp_16"
-        android:layout_marginEnd="@dimen/dp_16"
-        android:layout_marginBottom="@dimen/dp_16"
-        android:background="@drawable/btn_grn_bg"
-
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.fameget.dreamgroceries.customviews.CFTextView
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pay_later"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="@dimen/txt_btn"
-        app:layout_constraintBottom_toBottomOf="@id/viewPayLater"
-        app:layout_constraintEnd_toEndOf="@id/viewPayLater"
-        app:layout_constraintStart_toStartOf="@id/viewPayLater"
-        app:layout_constraintTop_toTopOf="@id/viewPayLater" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

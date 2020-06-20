@@ -17,6 +17,9 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_mainFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
     </fragment>
     <fragment
         android:id="@+id/phoneNumberFragment"
@@ -44,6 +47,9 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_enterOtpFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
     </fragment>
     <fragment
         android:id="@+id/enterDetailsFragment"
@@ -52,11 +58,44 @@
         tools:layout="@layout/fragment_enter_details" >
         <action
             android:id="@+id/action_enterDetailsFragment_to_homeActivity"
-            app:destination="@id/homeActivity" />
+            app:destination="@id/homeActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+        <action
+            android:id="@+id/action_enterDetailsFragment_to_supportFragment"
+            app:destination="@id/supportFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_enterDetailsFragment_to_noDeliveryAddressFragment"
+            app:destination="@id/noDeliveryAddressFragment" />
     </fragment>
     <activity
         android:id="@+id/homeActivity"
         android:name="com.fameget.dreamgroceries.home.HomeActivity"
         android:label="app_bar_home"
         tools:layout="@layout/app_bar_home" />
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.fameget.dreamgroceries.home.ui.support.SupportFragment"
+        android:label="fragment_support"
+        tools:layout="@layout/fragment_support" />
+    <fragment
+        android:id="@+id/noDeliveryAddressFragment"
+        android:name="com.fameget.dreamgroceries.NoDeliveryAddressFragment"
+        android:label="fragment_no_delivery_address"
+        tools:layout="@layout/fragment_no_delivery_address" >
+        <action
+            android:id="@+id/action_noDeliveryAddressFragment_to_supportFragment"
+            app:destination="@id/supportFragment" />
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue='""' />
+    </fragment>
 </navigation>

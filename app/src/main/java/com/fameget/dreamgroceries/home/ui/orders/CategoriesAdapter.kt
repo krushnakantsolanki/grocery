@@ -6,14 +6,17 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.fameget.dreamgroceries.R
+import com.fameget.dreamgroceries.data.Category
 import kotlinx.android.synthetic.main.item_category.view.*
 
-class CategoriesAdapter(list: List<String>)
+class CategoriesAdapter(val listener: CategoryClickListener)
 
 
     : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var mList: List<String> = list
+    private var mSelectedCategory: Category? = null
+    private var mList: List<Category> = ArrayList()
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -28,12 +31,46 @@ class CategoriesAdapter(list: List<String>)
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val categoryHolder: CategoryHolder = holder as CategoryHolder;
-        categoryHolder.tvCategory.setText(mList.get(position))
+        val category = mList[position]
+        categoryHolder.tvCategory.text = category.name
+        categoryHolder.tvCategory.isSelected = category.isSelected
         categoryHolder.tvCategory.setOnClickListener {
+            onCategorySelected(categoryHolder,category)
+            listener.onCategoryClicked(category,position)
 
-            categoryHolder.tvCategory.isSelected = !categoryHolder.tvCategory.isSelected
 
         }
+
+    }
+
+    private fun onCategorySelected(
+        categoryHolder: CategoryHolder,
+        category: Category
+    ) {
+        if (mSelectedCategory != null) {
+            mSelectedCategory?.isSelected = false
+        }
+        categoryHolder.tvCategory.isSelected = !categoryHolder.tvCategory.isSelected
+        category.isSelected = categoryHolder.tvCategory.isSelected
+        mSelectedCategory = category
+        notifyDataSetChanged()
+    }
+
+    fun setList(categoryList: List<Category>?) {
+        if (categoryList != null) {
+            mList = categoryList
+            notifyDataSetChanged()
+        }
+
+    }
+
+    fun getSelectedCategoriesId(): IntArray {
+
+        for (category in mList) {
+            if (category.isSelected)
+                return intArrayOf(category.id)
+        }
+        return IntArray(0)
 
     }
 

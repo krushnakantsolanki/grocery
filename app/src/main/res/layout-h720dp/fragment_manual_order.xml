@@ -78,11 +78,12 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <com.fameget.dreamgroceries.customviews.CFEditText
-            android:id="@+id/edtFirstName"
+            android:id="@+id/edtInst"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:gravity="start|top"
-            android:inputType="textCapSentences"
+            android:maxLines="4"
+            android:inputType="textPersonName|textMultiLine"
             android:textColor="@color/textColor"
             android:textSize="@dimen/txt_14" />
         />

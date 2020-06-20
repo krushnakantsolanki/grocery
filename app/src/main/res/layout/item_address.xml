@@ -3,93 +3,59 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/dp_8">-->
 
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/conContainer"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/dp_8"
-    android:background="@color/white"
-    android:elevation="@dimen/dp_8"
-
-    app:cardCornerRadius="@dimen/dp_8"
+    android:background="@drawable/bg_address_selector"
+    android:paddingStart="@dimen/dp_16"
+    android:paddingBottom="@dimen/dp_16"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingStart="@dimen/dp_16"
 
-        android:paddingBottom="@dimen/dp_16">
+    <com.fameget.dreamgroceries.customviews.CFTextView
 
-        <ImageView
-            android:id="@+id/ivSelect"
-            android:layout_width="@dimen/dp_16"
-            android:layout_height="@dimen/dp_16"
-            android:layout_margin="@dimen/dp_8"
-            android:src="@drawable/ic_un_check"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-
-            />
-
-        <com.fameget.dreamgroceries.customviews.CFTextView
-
-            android:id="@+id/tvAddress1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="2"
-            android:paddingTop="@dimen/dp_16"
-            android:paddingEnd="@dimen/dp_16"
-            android:text="34B NewPark Street Vancouver"
-            android:textColor="@color/colorAccent"
-            android:textSize="@dimen/txt_14"
-            app:layout_constraintEnd_toStartOf="@+id/ivSelect"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.fameget.dreamgroceries.customviews.CFTextView
-
-            android:id="@+id/tvAddress2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:paddingEnd="@dimen/dp_16"
-            android:text="MA 3454"
-            android:textColor="@color/colorAccent"
-            android:textSize="@dimen/txt_14"
-            app:layout_constraintEnd_toStartOf="@+id/ivSelect"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvAddress1" />
+        android:id="@+id/tvAddress1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="5"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:text="34B NewPark Street Vancouver"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/txt_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-        <com.fameget.dreamgroceries.customviews.CFTextView
-            android:id="@+id/tvEdit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/dp_16"
-            android:paddingEnd="@dimen/dp_16"
-            android:text="@string/edit"
-            android:textColor="@color/blue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvAddress2" />
+    <com.fameget.dreamgroceries.customviews.CFTextView
+        android:id="@+id/tvEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:text="@string/edit"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toStartOf="@id/tvDelete"
+        app:layout_constraintTop_toBottomOf="@id/tvAddress1" />
 
-        <com.fameget.dreamgroceries.customviews.CFTextView
-            android:id="@+id/tvDelete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/dp_16"
-            android:paddingEnd="@dimen/dp_16"
-            android:text="@string/delete"
-            android:textColor="@color/red"
-            app:layout_constraintBottom_toBottomOf="@id/tvEdit"
-            app:layout_constraintStart_toEndOf="@id/tvEdit" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.fameget.dreamgroceries.customviews.CFTextView
+        android:id="@+id/tvDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:text="@string/delete"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toBottomOf="@id/tvEdit"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
-</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <!--

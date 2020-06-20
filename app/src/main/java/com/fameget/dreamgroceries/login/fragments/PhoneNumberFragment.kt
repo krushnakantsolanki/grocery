@@ -5,8 +5,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
+import com.fameget.dreamgroceries.base.BaseFragment
+import com.fameget.dreamgroceries.data.OtpRequest
+import com.fameget.dreamgroceries.data.OtpResponse
 import com.fameget.dreamgroceries.databinding.FragmentPhoneNumberBinding
+import com.fameget.dreamgroceries.extensions.getViewModelFactory
+import com.fameget.dreamgroceries.extensions.isTilEmpty
+import com.fameget.dreamgroceries.login.LoginViewModel
+import com.fameget.dreamgroceries.utilities.Utils
+import com.fameget.dreamgroceries.webservices.Status
+import kotlinx.android.synthetic.main.fragment_phone_number.*
+import com.fameget.dreamgroceries.webservices.Resource as Resource1
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -18,8 +29,13 @@ private const val ARG_PARAM2 = "param2"
  * Use the [PhoneNumberFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class PhoneNumberFragment : Fragment() {
+class PhoneNumberFragment : BaseFragment() {
+    // private lateinit var viewModel: LoginViewModel
     private lateinit var mBinding: FragmentPhoneNumberBinding
+
+    private val viewModel by lazy {
+        requireActivity().getViewModelFactory<LoginViewModel>()
+    }
 
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -44,15 +60,80 @@ class PhoneNumberFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        //setupViewModel(LoginViewModel::class.java)
+
         mBinding.btnNext.setOnClickListener {
-            val action =
-                PhoneNumberFragmentDirections
-                    .actionPhoneNumberFragmentToEnterOtpFragment()
-            mBinding.btnNext.findNavController().navigate(action)
+            if (validateInputs()) {
+                getOtp()
+            }
         }
-        mBinding.tiMob.requestFocus()
         mBinding.ivBack.setOnClickListener { activity?.onBackPressed() }
     }
+
+    private fun getOtp() {
+        /*if(!Utils.isNetworkConnected(requireContext())){
+            Utils.showToast(requireContext(),getString(R.string.no_internet))
+            return
+        }*/
+        viewModel.getOtp(
+            OtpRequest(
+                mBinding.ccp?.selectedCountryCode,
+                mBinding.tiMob.editText?.text.toString()
+            )
+        )
+            .observe(requireActivity(), Observer {
+                handleResponse(it)
+
+            })
+    }
+
+    private fun handleResponse(it: Resource1<OtpResponse?>) {
+        it?.let { resource ->
+            when (resource.status) {
+                Status.SUCCESS -> {
+                    hideProgress(mBinding.progressBar2)
+                    val otpResponse = resource.data as OtpResponse
+                    Utils.showToastShort(requireContext(), otpResponse.message)
+                    Utils.showToast(requireContext(), otpResponse.otp)
+                    val action =
+                        PhoneNumberFragmentDirections
+                            .actionPhoneNumberFragmentToEnterOtpFragment()
+                    mBinding.btnNext.findNavController().navigate(action)
+
+                }
+                Status.ERROR -> {
+                    /*recyclerView.visibility = View.VISIBLE
+                    progressBar.visibility = View.GONE*/
+                    hideProgress(progressBar2)
+                    Utils.showToast(requireContext(), resource.message)
+                }
+                Status.LOADING -> {
+                    showProgress(mBinding.progressBar2)
+                    /*progressBar.visibility = View.VISIBLE
+                    recyclerView.visibility = View.GONE*/
+                }
+            }
+        }
+    }
+
+
+    private fun validateInputs(): Boolean {
+        if (tiMob.isTilEmpty(true))
+            return false
+        return true
+    }
+
+    /*protected fun setupViewModel() {
+        viewModel = requireActivity().run {
+            ViewModelProvider(
+                this,
+                ViewModelFactory()
+            ).get(LoginViewModel::class.java)
+        }
+
+
+    }*/
+
 
     companion object {
         /**

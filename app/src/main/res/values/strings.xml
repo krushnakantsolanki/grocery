@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DreamGroceries</string>
+    <string name="app_name">YourOrderApp</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 
@@ -45,10 +45,11 @@
     <string name="create_pickup">Create Pickup Order</string>
     <string name="welcome_to">WELCOME TO</string>
     <string name="start_ordering">Start Ordering</string>
+    <string name="start_ordering_no_data">Seems like you haven\'t ordered yet!.</string>
     <string name="home">Home</string>
     <string name="my_orders">My Orders</string>
-    <string name="support">Support</string>
-    <string name="profile">Profile</string>
+    <string name="support">Customer Support</string>
+    <string name="profile">My Profile</string>
     <string name="logout">Logout</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -58,7 +59,7 @@
     <string name="browse_store_items">Browse Store Items</string>
     <string name="use_shop_cart">Use shopping cart</string>
     <string name="manual_order">Manual Order</string>
-    <string name="add_inst">Additional Instructions.</string>
+    <string name="add_inst">Additional Instructions</string>
     <string name="add_more_items">Add More Items</string>
     <string name="schedule_pickup">Schedule Pickup</string>
     <string name="send_to_store">Send Order To Store</string>
@@ -69,7 +70,7 @@
     <string name="questions">Questions?</string>
     <string name="call_store">Call Store</string>
     <string name="email_store">Email Store</string>
-    <string name="enter_delivery_address">Enter Delivery Address</string>
+    <string name="enter_delivery_address">Add Delivery Address</string>
     <string name="view_my_orders">View My Order</string>
     <string name="store_assoc_will_call">Store associate will call to schedule\n the delivery</string>
     <string name="products">Products</string>
@@ -78,21 +79,21 @@
     <string name="view_cart">View Cart</string>
     <string name="plus_taxes">Plus  Taxes</string>
     <string name="my_cart">My cart</string>
-    <string name="pay_later">Yes, I will Pay Later</string>
-    <string name="pay_now">Yes, I will Pay Now</string>
-    <string name="finalize_order">Finalize order ?</string>
+    <string name="pay_later">Pay Later - Send Order to Store</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="finalize_order">Confirm Order ?</string>
     <string name="your_order">Your Order</string>
     <string name="remove">Remove</string>
     <string name="sub_total">Sub Total</string>
     <string name="tax">Tax</string>
-    <string name="to_pay">To pay</string>
-    <string name="bill_details">Bill details</string>
+    <string name="to_pay">To Pay</string>
+    <string name="bill_details">Bill Details</string>
     <string name="scd_pickup_time"><![CDATA[Schedule Pickup Time & Date]]></string>
     <string name="scd_pickup">Schedule Pickup</string>
-    <string name="choose_address">Choose delivery address</string>
+    <string name="choose_address">Delivery address</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
-    <string name="add_new_address">Add New Address</string>
+    <string name="add_new_address">Add Delivery Address</string>
     <string name="enter_your_card_details">Enter your card details</string>
     <string name="your_card_number">Your Card Number</string>
     <string name="name_on_card">Name on card</string>
@@ -112,4 +113,87 @@
     <string name="store_address">Store Address</string>
     <string name="get_directions">Get directions</string>
     <string name="chat_with">Chat with Store Associate</string>
+    <string name="no_internet">"No Internet. Please check your internet connection!!!"</string>
+    <string name="google_sign_in_failed">"Google sign in failed with code %d"</string>
+    <string name="google_sign_in_successful">Google sign in successful</string>
+    <string name="can_not_empty">Can not empty</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="login_successful">Login Successful</string>
+    <string name="welcome">Welcome %s</string>
+    <string name="no_phone_added">No Phone number added</string>
+    <string name="please_enter_otp">Plesae enter otp</string>
+    <string name="please_enter_valid_otp">Please enter valid otp</string>
+    <string name="location_per_required">Location permission required to use the app</string>
+    <string name="alert">Alert</string>
+    <string name="cancel">Cancel</string>
+    <string name="pick_your_location">Pick your location</string>
+    <string name="zip_code_can_not_empty">Zip code can\'t empty</string>
+    <string name="please_pick_valid_location">Please pick valid location</string>
+    <string name="manage_address">Manage Address</string>
+    <string name="manage_addresses">Manage Address</string>
+    <string name="edit_address">Edit Delivery Address</string>
+    <string name="delete_address">Delete Address</string>
+    <string name="delete_address_desc">Are you sure you want to delete?</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="no_address_added">No address found</string>
+    <string name="no_products_added">No products added yet</string>
+    <string name="no_products_in_category">No products in this category</string>
+    <string name="no_products_found">No products found</string>
+    <string name="items">%d Items</string>
+    <string name="remove_product">Remove Product</string>
+    <string name="remove_product_desc">Are you sure want to remove?</string>
+    <string name="change_address">Select Address</string>
+    <string name="add_address">Add Address</string>
+    <string name="cart_is_empty">Your cart is empty</string>
+    <string name="no_delivert_address_selected">Please add delivery address</string>
+    <string name="products_count">%d Products</string>
+
+
+    <string name="status_pending">Pending</string>
+    <string name="status_confirm">Confirm</string>
+    <string name="status_in_process">In Processing</string>
+    <string name="status_ready">Ready for pickup</string>
+    <string name="status_out_for_del">Out for delivery</string>
+    <string name="status_picked_up">Picked up</string>
+    <string name="status_delivered">Delivered</string>
+    <string name="status_order_cancelled">Order Cancelled</string>
+    <string name="card_no_not_valid">Card number is not valid</string>
+    <string name="cvv_not_valid">CVV number is not valid</string>
+    <string name="card_expiry_not_valid">Card expiry is not valid</string>
+    <string name="cancel_order">Cancel Order</string>
+    <string name="are_sure_cancel_order">Are you sure want to cancel order?</string>
+    <string name="no_orders_found">No orders found</string>
+    <string name="no_pick_time_selected">No pick up time selected</string>
+    <string name="please_add_atleast_one_product">Please add atleast one product</string>
+    <string name="plesae_select_address_to_deliver">Please select address to deliver your order</string>
+    <string name="pickup_time_not_valid">Pick up time is not valid</string>
+    <string name="unable_to_pick_your_address">Unable to pick your address</string>
+    <string name="order_details">Order Details</string>
+    <string name="qty">QTY : %s</string>
+    <string name="products_list">Products List</string>
+    <string name="select_address">Select Address</string>
+    <string name="verify_order_texr">Are you sure want to place order?\nOr verify it before proceed.</string>
+    <string name="proceed">Proceed</string>
+    <string name="verify">Verify</string>
+    <string name="reload">Reload</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="semms_you_offline">Seems like your are offline, please check\nyour internet connection</string>
+    <string name="no_products_uploaded">Store has not uploaded\nany products yet</string>
+    <string name="try_manual_ordering">Please try manual ordering.</string>
+    <string name="order_now">Order Now</string>
+    <string name="semms_like_you_not_added_address">Seems like you haven\'t added your\ndelivery address yet!</string>
+    <string name="no_notifications_found">No Notifications Found</string>
+    <string name="you_will_see_it_here">You will see it here once your\norder status changed</string>
+    <string name="contact_support">Contact Support</string>
+    <string name="clear_all">Clear All</string>
+    <string name="please_enter_mobile_no_to_sign">Please enter Mobile\nPhone number to sign in</string>
+    <string name="no_delivery_available">Delivery not available in\nyour area</string>
+    <string name="you_can_contact_your_team">You can contact our customer support\nteam</string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="edit_order">Edit Order</string>
+    <string name="items_not_available">Items not available</string>
+    <string name="download_invoice">Download Invoice</string>
+
+
 </resources>

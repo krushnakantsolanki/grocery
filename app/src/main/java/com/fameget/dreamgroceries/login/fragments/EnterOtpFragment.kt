@@ -1,10 +1,13 @@
 package com.fameget.dreamgroceries.login.fragments
 
 
+import android.app.Activity.RESULT_OK
 import android.app.Service
+import android.os.AsyncTask
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
@@ -12,9 +15,20 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
+import com.fameget.dreamgroceries.MyApp
 import com.fameget.dreamgroceries.R
+import com.fameget.dreamgroceries.base.BaseFragment
+import com.fameget.dreamgroceries.data.*
 import com.fameget.dreamgroceries.databinding.FragmentEnterOtpBinding
+import com.fameget.dreamgroceries.extensions.getViewModelFactory
+import com.fameget.dreamgroceries.login.LoginViewModel
+import com.fameget.dreamgroceries.utilities.Utils
+import com.fameget.dreamgroceries.webservices.Resource
+import com.fameget.dreamgroceries.webservices.Status
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.iid.FirebaseInstanceId
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -27,8 +41,14 @@ private const val ARG_PARAM2 = "param2"
  * Use the [EnterOtpFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class EnterOtpFragment : Fragment(), View.OnFocusChangeListener, View.OnKeyListener, TextWatcher {
+class EnterOtpFragment : BaseFragment(), View.OnFocusChangeListener, View.OnKeyListener,
+    TextWatcher {
+    private  var updateProfileReq: UpdateProfileReq? = null
     private lateinit var mBinding: FragmentEnterOtpBinding
+
+    private val loginVM by lazy {
+        requireActivity().getViewModelFactory<LoginViewModel>()
+    }
 
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -37,8 +57,9 @@ class EnterOtpFragment : Fragment(), View.OnFocusChangeListener, View.OnKeyListe
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+
+            updateProfileReq = it.getParcelable<UpdateProfileReq>(ARG_PARAM1)
+
         }
     }
 
@@ -53,15 +74,167 @@ class EnterOtpFragment : Fragment(), View.OnFocusChangeListener, View.OnKeyListe
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
         setPINListeners()
         mBinding.ivBack.setOnClickListener { activity?.onBackPressed() }
 
         mBinding.btnNext.setOnClickListener {
-            val action =
-                EnterOtpFragmentDirections
-                    .actionEnterOtpFragmentToEnterDetailsFragment()
-            mBinding.btnNext.findNavController().navigate(action)
+
+            if (validateInputs()) {
+                if (updateProfileReq == null)
+                    getFirebaseToken()
+                else {
+                    updateProfileReq?.run {
+                        loginVM.updateProfile(getProfileReq(mBinding.pinHiddenEdittext.text.toString(),this))
+                            .observe(viewLifecycleOwner, Observer { handleUpdateProfileResponse(it) })
+                    }
+
+                }
+
+            }
         }
+
+        mBinding.tvNotRecAct.setOnClickListener {
+
+            loginVM.getOtp(loginVM.mOtpRequest)
+                .observe(requireActivity(), Observer { handleOtpResponse(it) })
+        }
+    }
+
+    private fun handleUpdateProfileResponse(resource: Resource<SocialLoginResponse>?) {
+        when (resource?.status) {
+            Status.SUCCESS -> {
+                hideProgress(mBinding.progressBar3)
+                AsyncTask.execute {
+                    resource.data?.data?.let {
+                        MyApp.getInstance().toInfoDao().insertUser(
+                            it
+                        )
+                    }
+                }
+                requireActivity().setResult(RESULT_OK)
+                requireActivity().onBackPressed()
+                Utils.showToastShort(requireContext(), resource.data?.message)
+            }
+            Status.ERROR -> {
+
+                hideProgress(mBinding.progressBar3)
+                Utils.showToast(requireContext(), resource.message)
+            }
+            Status.LOADING -> {
+                showProgress(mBinding.progressBar3)
+            }
+        }
+    }
+
+    private fun getProfileReq(
+        otp: String,
+        updateProfileReq: UpdateProfileReq
+    ): UpdateProfilePhone {
+        return UpdateProfilePhone(
+            country_code = updateProfileReq.country_code,
+            phone_number = updateProfileReq.phone_number,
+            email = updateProfileReq.email,
+            first_name = updateProfileReq.first_name,
+            last_name = updateProfileReq.last_name,
+            otp = otp
+
+
+        )
+    }
+
+    private fun handleOtpResponse(resource: Resource<OtpResponse?>) {
+        when (resource.status) {
+            Status.SUCCESS -> {
+                hideProgress(mBinding.progressBar3)
+                Utils.showToast(requireContext(), resource.data?.message)
+                Utils.showToast(requireContext(), resource.data?.otp)
+            }
+            Status.ERROR -> {
+
+                hideProgress(mBinding.progressBar3)
+                Utils.showToast(requireContext(), resource.message)
+            }
+            Status.LOADING -> {
+                showProgress(mBinding.progressBar3)
+            }
+        }
+    }
+
+    private fun getFirebaseToken() {
+        FirebaseInstanceId.getInstance().instanceId
+            .addOnCompleteListener(OnCompleteListener { task ->
+                val token: String? = if (!task.isSuccessful) {
+                    Log.w("TAG", "getInstanceId failed", task.exception)
+                    ""
+                } else {
+                    task.result?.token
+                }
+
+
+
+                loginVM.login(
+                    mBinding.pinHiddenEdittext.text.toString(), token ?: ""
+
+                ).observe(requireActivity(),
+                    androidx.lifecycle.Observer { handleResponse(it) })
+
+
+            })
+    }
+
+
+    private fun handleResponse(it: Resource<SocialLoginResponse?>) {
+        it?.let { resource ->
+            when (resource.status) {
+                Status.SUCCESS -> {
+                    hideProgress(mBinding.progressBar3)
+                    val profile = resource.data?.data as Profile
+
+                    if (profile.profile_complete == 1) {
+                        Utils.showToast(
+                            requireContext(),
+                            getString(R.string.welcome, profile.first_name)
+
+                        )
+                        val action =
+                            EnterOtpFragmentDirections.actionEnterOtpFragmentToHomeActivity()
+                        mBinding.btnNext.findNavController().navigate(action)
+                        requireActivity().finish()
+                    } else {
+                        val action =
+                            EnterOtpFragmentDirections.actionEnterOtpFragmentToEnterDetailsFragment()
+                        mBinding.btnNext.findNavController().navigate(action)
+                    }
+
+
+                }
+                Status.ERROR -> {
+
+                    hideProgress(mBinding.progressBar3)
+                    Utils.showToast(requireContext(), resource.message)
+                }
+                Status.LOADING -> {
+                    showProgress(mBinding.progressBar3)
+                    /*progressBar.visibility = View.VISIBLE
+                    recyclerView.visibility = View.GONE*/
+                }
+            }
+        }
+    }
+
+
+    private fun validateInputs(): Boolean {
+        if (mBinding.pinHiddenEdittext.text.toString().isEmpty()) {
+            Utils.showToast(requireContext(), getString(R.string.please_enter_otp))
+            return false
+
+        } else if (mBinding.pinHiddenEdittext.text.toString().length < 6) {
+            Utils.showToast(requireContext(), getString(R.string.please_enter_valid_otp))
+            return false
+        }
+        return true
+
     }
 
     /**
@@ -136,11 +309,11 @@ class EnterOtpFragment : Fragment(), View.OnFocusChangeListener, View.OnKeyListe
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance(updateProfileReq: UpdateProfileReq) =
             EnterOtpFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                    putParcelable(ARG_PARAM1, updateProfileReq)
+
                 }
             }
     }

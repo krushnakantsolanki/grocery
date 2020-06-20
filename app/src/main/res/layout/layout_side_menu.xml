@@ -10,7 +10,7 @@
         android:id="@+id/rlHome"
         android:layout_width="match_parent"
         android:layout_height="@dimen/drawer_item"
-        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_24"
         android:clickable="true"
 
         android:background="@color/colorPrimary"

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addorder.fragments.ViewCartFragment">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_16"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.fameget.dreamgroceries.customviews.CFTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_16"
+        android:text="@string/order_details"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/txt_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_24">
+
+
+            <include
+                android:id="@+id/layoutMyOrder"
+                layout="@layout/item_view_order"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/order_hgt" />
+
+            <com.fameget.dreamgroceries.customviews.CFTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_8"
+                android:text="@string/products_list"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/txt_14"
+                app:fontName="@string/font_bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:overScrollMode="never" />
+
+            <com.fameget.dreamgroceries.customviews.CFTextView
+                android:id="@+id/tvItemsNotAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_16"
+                android:text="@string/items_not_available"
+                android:textColor="@color/textColor"
+                android:visibility="gone"
+                android:textSize="@dimen/txt_14"
+                app:fontName="@string/font_bold" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/llAddView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:orientation="vertical"
+                    android:saveEnabled="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+                <View
+                    android:id="@+id/viewRemoveClick"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:layout_constraintBottom_toBottomOf="@id/llAddView"
+                    app:layout_constraintEnd_toEndOf="@id/llAddView"
+                    app:layout_constraintStart_toStartOf="@id/llAddView"
+                    app:layout_constraintTop_toTopOf="@id/llAddView"></View>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <com.fameget.dreamgroceries.customviews.CFTextView
+                android:id="@+id/tvBillDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16"
+                android:text="@string/bill_details"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/txt_14"
+                app:fontName="@string/font_bold" />
+
+
+
+                <LinearLayout
+                    android:id="@+id/cardBill"
+                    android:layout_margin="@dimen/dp_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_my_order_item"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.fameget.dreamgroceries.customviews.CFTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:padding="@dimen/dp_16"
+                            android:text="@string/sub_total"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/txt_16" />
+
+                        <com.fameget.dreamgroceries.customviews.CFTextView
+                            android:id="@+id/tvSubTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:padding="@dimen/dp_16"
+
+                            android:text="$ 27.00"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/txt_16" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"
+                            android:layout_alignParentBottom="true"
+                            android:alpha="0.67"
+                            android:background="@color/textGray"></View>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.fameget.dreamgroceries.customviews.CFTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:padding="@dimen/dp_16"
+                            android:text="@string/tax"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/txt_16" />
+
+                        <com.fameget.dreamgroceries.customviews.CFTextView
+                            android:id="@+id/tvTotalTax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:padding="@dimen/dp_16"
+
+                            android:text="$ 5.00"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/txt_16" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_1"
+                            android:layout_alignParentBottom="true"
+                            android:alpha="0.67"
+                            android:background="@color/textGray"></View>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.fameget.dreamgroceries.customviews.CFTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:padding="@dimen/dp_16"
+                            android:text="@string/to_pay"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/txt_16"
+                            app:fontName="@string/font_bold" />
+
+                        <com.fameget.dreamgroceries.customviews.CFTextView
+                            android:id="@+id/tvTotalPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:paddingTop="@dimen/dp_16"
+                            android:paddingEnd="@dimen/dp_16"
+                            android:paddingBottom="@dimen/dp_24"
+                            android:text="$ 32.00"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/txt_16"
+                            app:fontName="@string/font_bold" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            <com.fameget.dreamgroceries.customviews.CFTextView
+                android:id="@+id/tvScdPickUpLbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_12"
+                android:text="@string/scd_pickup_time"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/txt_14"
+                app:fontName="@string/font_bold" />
+
+
+            <com.fameget.dreamgroceries.customviews.CFTextView
+                android:id="@+id/tvScdValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:paddingStart="@dimen/dp_12"
+                android:textColor="@color/textGray"
+                android:textSize="@dimen/txt_14"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:background="@drawable/bg_my_order_item"
+                android:drawablePadding="@dimen/dp_8"
+                android:drawableStart="@drawable/ic_time"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvScdPickUpLbl" />
+
+            <com.fameget.dreamgroceries.customviews.CFTextView
+                android:id="@+id/tvAChooseAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:text="@string/choose_address"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/txt_14"
+                app:fontName="@string/font_bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:overScrollMode="never" />
+
+
+            <com.fameget.dreamgroceries.customviews.CFTextView
+                android:id="@+id/tvAddInst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16"
+                android:text="@string/add_inst"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/txt_14"
+                app:fontName="@string/font_bold" />
+
+            <com.fameget.dreamgroceries.customviews.CFTextView
+                android:id="@+id/tvAddInstValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_12"
+                android:layout_marginTop="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_16"
+                android:background="@drawable/bg_my_order_item"
+                android:text="@string/add_inst"
+                android:textColor="@color/textGray"
+                android:textSize="@dimen/txt_12"
+                app:fontName="@string/font_regular" />
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

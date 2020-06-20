@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SupportFragment">
+    tools:context=".home.ui.support.SupportFragment">
 
     <com.fameget.dreamgroceries.customviews.CFTextView
         android:id="@+id/tvTitle"
@@ -61,21 +61,17 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_16"
-                android:layout_marginTop="@dimen/dp_24"
-                android:layout_marginEnd="@dimen/dp_16"
-                android:layout_marginBottom="@dimen/dp_8"
-                android:background="@color/white"
-                app:cardCornerRadius="@dimen/dp_4"
-                app:cardElevation="@dimen/dp_4">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:background="@drawable/bg_my_order_item"
+
                     android:paddingBottom="@dimen/dp_16">
 
                     <androidx.constraintlayout.widget.Guideline
@@ -126,23 +122,18 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-            </androidx.cardview.widget.CardView>
 
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_16"
-                android:layout_marginEnd="@dimen/dp_16"
-                android:layout_marginBottom="@dimen/dp_8"
-                android:background="@color/white"
-                app:cardCornerRadius="@dimen/dp_4"
-                app:cardElevation="@dimen/dp_4">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="@dimen/dp_16"
+                    android:background="@drawable/bg_my_order_item"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_8"
+
                     android:paddingBottom="@dimen/dp_16">
 
                     <androidx.constraintlayout.widget.Guideline
@@ -204,7 +195,6 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-            </androidx.cardview.widget.CardView>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -219,8 +209,6 @@
                     android:layout_marginEnd="@dimen/dp_16"
                     android:layout_marginBottom="@dimen/dp_16"
                     android:background="@drawable/btn_grn_bg"
-
-                    app:layout_constraintBottom_toTopOf="@id/viewPayLater"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <com.fameget.dreamgroceries.customviews.CFTextView

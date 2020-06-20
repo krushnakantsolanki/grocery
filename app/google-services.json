@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "329685904997",
+    "firebase_url": "https://yourorderapp-58496.firebaseio.com",
+    "project_id": "yourorderapp-58496",
+    "storage_bucket": "yourorderapp-58496.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329685904997:android:e948dc93a81b963c1aa08c",
+        "android_client_info": {
+          "package_name": "com.fameget.dreamgroceries"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "329685904997-9l6johhe2apekeb1856jmhv7cbnvv133.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsmFbdAzSQKEcQZfcyLgS6_qiMO3XbE1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "329685904997-9l6johhe2apekeb1856jmhv7cbnvv133.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "329685904997-04k9uujfga8v5ortijb0tevbev364n5p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.e-comm.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -3,29 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="@dimen/order_hgt"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginBottom="@dimen/dp_8"
     android:background="@drawable/bg_my_order_item"
-    android:padding="@dimen/dp_8">
+    android:padding="@dimen/dp_12">
 
     <com.fameget.dreamgroceries.customviews.CFTextView
+        android:id="@+id/tvOrderId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Order ID #123456"
+        tools:text="Order ID #123456"
         android:textColor="@color/textColor"
         android:textSize="@dimen/txt_14"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.fameget.dreamgroceries.customviews.CFTextView
+        android:id="@+id/tvPriceQun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="$89.0"
+        tools:text="$89.0"
         android:textColor="@color/textColor"
         android:textSize="@dimen/txt_12"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.fameget.dreamgroceries.customviews.CFTextView
+        android:id="@+id/tvTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="5 Aug 2020 10:30 PM"
@@ -39,11 +43,13 @@
         android:id="@+id/tvOrderStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minWidth="@dimen/min_status_width"
         android:background="@drawable/bg_order_process"
         android:paddingStart="@dimen/dp_4"
         android:paddingTop="@dimen/dp_6"
         android:paddingEnd="@dimen/dp_4"
         android:paddingBottom="@dimen/dp_6"
+        android:gravity="center_horizontal"
         android:text="Order in Process"
         android:textColor="@color/white"
         android:textSize="@dimen/txt_12"
@@ -51,6 +57,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.fameget.dreamgroceries.customviews.CFTextView
+        android:id="@+id/tvCancelOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_cancel_order"

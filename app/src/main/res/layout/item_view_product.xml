@@ -3,27 +3,23 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/dp_8">-->
 
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/dp_8"
-    android:layout_marginEnd="@dimen/dp_8"
-    android:layout_marginTop="@dimen/dp_4"
-    android:layout_marginBottom="@dimen/dp_4"
-    android:background="@color/white"
-    android:elevation="@dimen/dp_8"
 
-    app:cardCornerRadius="@dimen/dp_8"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_4"
         android:paddingStart="@dimen/dp_8"
         android:paddingTop="@dimen/dp_16"
         android:paddingEnd="@dimen/dp_8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bg_my_order_item"
         android:paddingBottom="@dimen/dp_16">
 
         <View
@@ -58,9 +54,9 @@
             android:layout_height="wrap_content"
             android:paddingStart="@dimen/dp_8"
             android:paddingEnd="@dimen/dp_8"
+            android:text="1"
             android:textColor="@color/textGray"
             android:textSize="@dimen/txt_16"
-            android:text="1"
             app:layout_constraintBottom_toBottomOf="@id/ivAddPrd"
             app:layout_constraintEnd_toStartOf="@id/ivAddPrd"
             app:layout_constraintTop_toTopOf="@id/ivAddPrd" />
@@ -74,63 +70,69 @@
             app:layout_constraintEnd_toStartOf="@id/tvCount"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.fameget.dreamgroceries.customviews.CFTextView
-            android:id="@+id/tvProductDesc"
+        <LinearLayout
+            android:id="@+id/llLayout"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="2"
-            android:layout_marginStart="@dimen/dp_8"
-            android:paddingEnd="@dimen/dp_8"
-            android:text="Pizza Margherita (more commonly known in English as Margherita pizza) is a typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt and extra-virgin olive oil."
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/txt_12"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/viewProduct"
             app:layout_constraintEnd_toStartOf="@id/ivRemPrd"
             app:layout_constraintStart_toEndOf="@id/viewProduct"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.fameget.dreamgroceries.customviews.CFTextView
+                android:id="@+id/tvProductDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:paddingEnd="@dimen/dp_8"
+                android:text="Pizza Margherita (more commonly known in English as Margherita pizza) is a typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt and extra-virgin olive oil."
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/txt_12"
+                app:layout_constraintEnd_toStartOf="@id/ivRemPrd"
+                app:layout_constraintStart_toEndOf="@id/viewProduct"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"></View>
+
+
+            <com.fameget.dreamgroceries.customviews.CFTextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:includeFontPadding="false"
+                android:paddingTop="@dimen/dp_4"
+                android:text="$ 5.00"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/txt_14"
+                app:layout_constraintBottom_toBottomOf="@id/viewProduct"
+                app:layout_constraintStart_toStartOf="@id/tvProductDesc" />
+        </LinearLayout>
+
 
         <com.fameget.dreamgroceries.customviews.CFTextView
-            android:id="@+id/tvQun"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:text="2 count"
-            android:textColor="@color/textGray"
-            android:textSize="@dimen/txt_12"
-            app:layout_constraintBottom_toTopOf="@id/tvPrice"
-            app:layout_constraintStart_toStartOf="@id/tvProductDesc"
-            app:layout_constraintTop_toBottomOf="@id/tvProductDesc" />
-
-
-        <com.fameget.dreamgroceries.customviews.CFTextView
-            android:id="@+id/tvPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:text="$ 5.00"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/txt_14"
-
-            app:layout_constraintBottom_toBottomOf="@id/viewProduct"
-            app:layout_constraintStart_toStartOf="@id/tvProductDesc" />
-
-
-        <com.fameget.dreamgroceries.customviews.CFTextView
+            android:id="@+id/tvRemove"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/dp_16"
-            android:paddingBottom="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_1"
             android:text="@string/remove"
             android:textColor="@color/red"
             android:textSize="@dimen/txt_12"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivRemPrd" />
+            app:layout_constraintBottom_toBottomOf="@id/llLayout"
+            app:layout_constraintEnd_toEndOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</androidx.cardview.widget.CardView>
 
 
     <!--

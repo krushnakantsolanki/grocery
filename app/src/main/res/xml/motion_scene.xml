@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetStart="@layout/activity_animation_check"
+        motion:constraintSetEnd="@layout/activity_animation_check_end"
+        motion:duration="1000">
+
+        <OnClick
+            motion:touchAnchorId="@id/button"
+            motion:touchAnchorSide="top"
+            motion:dragDirection="dragUp"/>
+
+    </Transition>
+
+</MotionScene>

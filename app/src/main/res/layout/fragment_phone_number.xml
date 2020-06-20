@@ -3,6 +3,7 @@
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,25 +23,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15" />
+        app:layout_constraintGuide_percent="0.35" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideHor2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.6" />
 
 
-    <ImageView
+    <com.fameget.dreamgroceries.customviews.CFTextView
         android:id="@+id/ivLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_logo"
-
+        android:text="@string/please_enter_mobile_no_to_sign"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/txt_22"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@id/guideHor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideHor" />
+        app:layout_constraintStart_toStartOf="parent"></com.fameget.dreamgroceries.customviews.CFTextView>
+
+
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tiMob"
@@ -64,6 +70,24 @@
              />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16"
+        app:ccpDialog_keyboardAutoPopup="false"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_showFullName="true"
+        android:gravity="center"
+        android:background="@drawable/bg_country_picker"
+        app:layout_constraintBottom_toTopOf="@id/tiMob"
+        app:ccp_countryPreference="in,us,nz,gb"
+
+        app:ccp_hintExampleNumber="false" />
+
+
     <com.fameget.dreamgroceries.customviews.CFButton
         android:id="@+id/btnNext"
         style="@style/my_button"
@@ -76,4 +100,16 @@
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="@id/tiMob"
         app:layout_constraintTop_toBottomOf="@id/tiMob"></com.fameget.dreamgroceries.customviews.CFButton>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

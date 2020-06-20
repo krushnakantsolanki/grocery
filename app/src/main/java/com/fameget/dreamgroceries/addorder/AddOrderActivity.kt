@@ -3,13 +3,16 @@ package com.fameget.dreamgroceries.addorder
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.findNavController
 import com.fameget.dreamgroceries.*
+import com.fameget.dreamgroceries.addorder.fragments.*
+import com.fameget.dreamgroceries.base.BaseActivity
 import com.fameget.dreamgroceries.databinding.AddOrderActivityBinding
 import com.fameget.dreamgroceries.utilities.BUN_1
 
-class AddOrderActivity : AppCompatActivity(), ManualOrderFragment.ManualFragmentListener,
-    ViewCartFragment.ViewCartFragmentListener, ThanksFragment.ThanksFragmentListener {
+class AddOrderActivity : BaseActivity(), ManualOrderFragment.ManualFragmentListener,
+    ViewCartFragment.ViewCartFragmentListener, ThanksFragment.ThanksFragmentListener,ProductsFragment.ProductsFragmentListener,MakePaymentFragment.MakePaymentFragmentListener {
 
     private var mType: Int? = 0
     private lateinit var mBinding: AddOrderActivityBinding
@@ -26,21 +29,22 @@ class AddOrderActivity : AppCompatActivity(), ManualOrderFragment.ManualFragment
             finish()
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
 
-        } else if (findNavController(R.id.nav_order).currentDestination?.id == R.id.productsFragment) {
+        } /*else if (findNavController(R.id.nav_order).currentDestination?.id == R.id.productsFragment) {
             if (getForegroundFragment() is ProductsFragment) {
                 val productFragment: ProductsFragment = getForegroundFragment() as ProductsFragment
                 productFragment.onBackPressed()
             }
-        } else {
+        }*/ else {
             super.onBackPressed()
         }
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
     }
 
-    public fun getForegroundFragment(): Fragment? {
+    public override fun getMyFragmentManager(): FragmentManager? {
         val fragment = supportFragmentManager.findFragmentById(R.id.nav_order)
 
-        return fragment?.childFragmentManager?.fragments?.get(0)
+        //return fragment?.childFragmentManager?.fragments?.get(0)
+        return fragment?.childFragmentManager
 
 
     }

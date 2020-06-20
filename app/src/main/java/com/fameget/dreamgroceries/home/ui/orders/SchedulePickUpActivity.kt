@@ -2,9 +2,8 @@ package com.fameget.dreamgroceries.home.ui.orders
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.fameget.dreamgroceries.AddAddressFragment
 import com.fameget.dreamgroceries.R
-import com.fameget.dreamgroceries.SchedulePickupFragment
+import com.fameget.dreamgroceries.addorder.fragments.SchedulePickupFragment
 import com.fameget.dreamgroceries.databinding.ActivitySchedulePickUpBinding
 
 class SchedulePickUpActivity : AppCompatActivity() {
@@ -18,7 +17,8 @@ class SchedulePickUpActivity : AppCompatActivity() {
 
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        val fragment = SchedulePickupFragment()
+        val fragment =
+            SchedulePickupFragment()
         fragmentTransaction.replace(R.id.container, fragment)
         fragmentTransaction.commit()
     }

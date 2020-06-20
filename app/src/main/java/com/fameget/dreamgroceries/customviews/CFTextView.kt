@@ -5,7 +5,7 @@ import android.text.TextUtils
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
 import com.fameget.dreamgroceries.R
-import com.fameget.dreamgroceries.TypefaceCache
+import com.fameget.dreamgroceries.utilities.TypefaceCache
 
 /**
  *

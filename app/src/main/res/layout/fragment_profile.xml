@@ -57,6 +57,7 @@
                     android:textSize="@dimen/txt_12" />
 
                 <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:id="@+id/tvFirstName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="John"
@@ -115,6 +116,7 @@
                     android:textSize="@dimen/txt_12" />
 
                 <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:id="@+id/tvLastName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Doe"
@@ -174,6 +176,7 @@
                     android:textSize="@dimen/txt_12" />
 
                 <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:id="@+id/tvEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="u1@users.com"
@@ -233,9 +236,10 @@
                     android:textSize="@dimen/txt_12" />
 
                 <com.fameget.dreamgroceries.customviews.CFTextView
+                    android:id="@+id/tvPhoneNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="97885456435"
+                    android:text="@string/no_phone_added"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/txt_16" />
             </LinearLayout>
@@ -261,9 +265,13 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/dp_16">
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_8">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideLineLocation"
@@ -273,33 +281,27 @@
                 app:layout_constraintGuide_percent="0.1"></androidx.constraintlayout.widget.Guideline>
 
 
-            <LinearLayout
-                android:id="@+id/llLocationetails"
+            <com.fameget.dreamgroceries.customviews.CFTextView
+                android:id="@+id/tvAddressLable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:orientation="vertical"
+                android:text="@string/manage_address"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/txt_16"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/guideLineLocation"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <com.fameget.dreamgroceries.customviews.CFTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/delivery_address"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="@dimen/txt_12" />
 
-                <com.fameget.dreamgroceries.customviews.CFTextView
-                    android:id="@+id/tvAddAddress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_16"
-                    android:background="@drawable/bg_scd_pickup"
-                    android:padding="@dimen/dp_8"
-                    android:text="@string/add"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="@dimen/txt_14" />
-            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_16"
+                android:src="@drawable/ic_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
 
             <ImageView
 
@@ -307,8 +309,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dp_16"
                 android:src="@drawable/ic_location"
-                app:layout_constraintEnd_toStartOf="@id/llLocationetails"
-                app:layout_constraintTop_toTopOf="@id/llLocationetails" />
+                app:layout_constraintEnd_toStartOf="@id/tvAddressLable"
+                app:layout_constraintTop_toTopOf="@id/tvAddressLable" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -320,6 +322,7 @@
             android:background="@color/colorAccent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/conNotification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/dp_8">
@@ -329,15 +332,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.1" />
+                app:layout_constraintGuide_percent="0.12" />
 
             <com.fameget.dreamgroceries.customviews.CFTextView
                 android:id="@+id/tvNot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="@dimen/dp_16"
-                android:textColor="@color/textColor"
                 android:text="@string/notification"
+                android:textColor="@color/textColor"
                 app:fontName="@string/font_bold"
                 app:layout_constraintStart_toEndOf="@id/guideLineNot"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -345,14 +348,15 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_16"
                 android:paddingTop="@dimen/dp_16"
-                android:layout_marginEnd="@dimen/dp_8"
                 android:src="@drawable/ic_notification"
                 app:layout_constraintBottom_toBottomOf="@id/tvNot"
                 app:layout_constraintEnd_toStartOf="@id/tvNot"
                 app:layout_constraintTop_toTopOf="@id/tvNot" />
 
             <ImageView
+                android:id="@+id/switchNotification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dp_16"
@@ -365,7 +369,16 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

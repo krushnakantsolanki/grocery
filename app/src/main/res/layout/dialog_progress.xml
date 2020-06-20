@@ -1,0 +1,22 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_progress_dialog">
+
+    <ProgressBar
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_gravity="center"
+        android:indeterminateDrawable="@drawable/custom_progressbar_thick" />
+
+    <ImageView
+        android:id="@+id/textView1"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:contentDescription="@null"
+        android:padding="@dimen/_4sdp"
+        android:src="@drawable/ic_logo" />
+
+</FrameLayout>

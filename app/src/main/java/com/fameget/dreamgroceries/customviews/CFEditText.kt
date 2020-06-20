@@ -4,7 +4,7 @@ import android.content.Context
 import android.text.TextUtils
 import android.util.AttributeSet
 import com.fameget.dreamgroceries.R
-import com.fameget.dreamgroceries.TypefaceCache
+import com.fameget.dreamgroceries.utilities.TypefaceCache
 import com.google.android.material.textfield.TextInputEditText
 
 /**

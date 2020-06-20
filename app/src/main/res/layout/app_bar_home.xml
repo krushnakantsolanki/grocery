@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,7 +13,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@android:color/transparent">
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -20,10 +21,15 @@
                 android:id="@+id/ivDrawer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_drawer"
-                android:layout_centerVertical="true"
                 android:layout_alignParentStart="true"
-                ></ImageView>
+                android:layout_centerVertical="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_drawer"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"></ImageView>
+
 
             <ImageView
                 android:id="@+id/ivNotification"
@@ -32,10 +38,36 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="@dimen/dp_16"
-                android:src="@drawable/ic_noti" />
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_noti"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.fameget.dreamgroceries.customviews.CFTextView
+                android:id="@+id/tvNotCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_noti_count"
+                android:gravity="center"
+                android:text="5"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_10"
+                app:layout_constraintStart_toStartOf="@id/spaceNot"
+                app:layout_constraintTop_toTopOf="@id/spaceNot"></com.fameget.dreamgroceries.customviews.CFTextView>
 
 
-        </RelativeLayout>
+            <Space
+                android:id="@+id/spaceNot"
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="34dp"
+                app:layout_constraintBottom_toBottomOf="@id/ivNotification"
+                app:layout_constraintEnd_toEndOf="@id/ivNotification" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.appcompat.widget.Toolbar>
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <color name="colorPrimary">#5dce71</color>
+    <color name="colorAddressSelection">#5C5DCE71</color>
     <color name="colorPrimaryDark">#5dce71</color>
     <color name="colorAccent">#6788a9</color>
     <color name="textColor">#213a5a</color>
@@ -18,7 +19,20 @@
     <color name="order_bg">#F2F2F7</color>
     <color name="light_green">#DDF9E3</color>
     <color name="bg_prodcuts">#F7F9FB</color>
-    <color name="trans_bg">#61030303</color>
+    <color name="trans_bg">#94030303</color>
+    <color name="noti_bg">#E5F2FE</color>
+
+
+    <color name="pending">#81D1F7</color>
+    <color name="confirm">#5DCE71</color>
+    <color name="in_processing">#FFC18A</color>
+    <color name="_ready_pick_up">#5DCE71</color>
+    <color name="outfordelivery">#5DCE71</color>
+    <color name="picked_up">#5DCE71</color>
+    <color name="delivered">#5DCE71</color>
+    <color name="cancelled">#FF786E</color>
+    <color name="border_color">#D3D3D3</color>
+    <color name="red_color">#FF0000</color>
 
 
 </resources>

@@ -18,15 +18,13 @@ import com.fameget.dreamgroceries.utilities.REQUEST_ADD_ORDER
 class HomeFragment : Fragment() {
 
     private lateinit var mBinding: FragmentHomeBinding
-    private lateinit var homeViewModel: HomeViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-            ViewModelProviders.of(this).get(HomeViewModel::class.java)
+
         mBinding = FragmentHomeBinding.inflate(inflater, container, false)
 
         /*homeViewModel.text.observe(viewLifecycleOwner, Observer {
