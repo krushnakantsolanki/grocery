@@ -10,7 +10,7 @@
         android:layout_height="@dimen/dp_1"
         android:background="@color/white" />
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

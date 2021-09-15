@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/guideHor2">
 
-            <com.fameget.dreamgroceries.customviews.CFEditText
+            <com.company.dreamgroceries.customviews.CFEditText
                 android:id="@+id/edtCardNo"
                 style="@style/input_view"
                 android:layout_width="match_parent"
@@ -76,7 +76,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/guideHor2">
 
-            <com.fameget.dreamgroceries.customviews.CFEditText
+            <com.company.dreamgroceries.customviews.CFEditText
                 android:id="@+id/edtNameCard"
                 style="@style/input_view"
                 android:layout_width="match_parent"
@@ -105,7 +105,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/guideHor2">
 
-                <com.fameget.dreamgroceries.customviews.CFEditText
+                <com.company.dreamgroceries.customviews.CFEditText
                     android:id="@+id/edtExp"
                     style="@style/input_view"
                     android:layout_width="match_parent"
@@ -130,7 +130,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/guideHor2">
 
-                <com.fameget.dreamgroceries.customviews.CFEditText
+                <com.company.dreamgroceries.customviews.CFEditText
                     android:id="@+id/edtCVV"
                     style="@style/input_view"
                     android:layout_width="match_parent"
@@ -158,7 +158,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/llCardDetails" />
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

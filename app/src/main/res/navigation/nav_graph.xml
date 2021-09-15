@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.fameget.dreamgroceries.login.fragments.LoginFragment"
+        android:name="com.company.dreamgroceries.login.fragments.LoginFragment"
         android:label="main_fragment"
         tools:layout="@layout/login_fragment" >
         <action
@@ -23,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/phoneNumberFragment"
-        android:name="com.fameget.dreamgroceries.login.fragments.PhoneNumberFragment"
+        android:name="com.company.dreamgroceries.login.fragments.PhoneNumberFragment"
         android:label="fragment_phone_number"
         tools:layout="@layout/fragment_phone_number" >
         <action
@@ -36,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/enterOtpFragment"
-        android:name="com.fameget.dreamgroceries.login.fragments.EnterOtpFragment"
+        android:name="com.company.dreamgroceries.login.fragments.EnterOtpFragment"
         android:label="fragment_enter_otp"
         tools:layout="@layout/fragment_enter_otp"
         >
@@ -53,7 +53,7 @@
     </fragment>
     <fragment
         android:id="@+id/enterDetailsFragment"
-        android:name="com.fameget.dreamgroceries.login.fragments.EnterDetailsFragment"
+        android:name="com.company.dreamgroceries.login.fragments.EnterDetailsFragment"
         android:label="fragment_enter_details"
         tools:layout="@layout/fragment_enter_details" >
         <action
@@ -77,17 +77,17 @@
     </fragment>
     <activity
         android:id="@+id/homeActivity"
-        android:name="com.fameget.dreamgroceries.home.HomeActivity"
+        android:name="com.company.dreamgroceries.home.HomeActivity"
         android:label="app_bar_home"
         tools:layout="@layout/app_bar_home" />
     <fragment
         android:id="@+id/supportFragment"
-        android:name="com.fameget.dreamgroceries.home.ui.support.SupportFragment"
+        android:name="com.company.dreamgroceries.home.ui.support.SupportFragment"
         android:label="fragment_support"
         tools:layout="@layout/fragment_support" />
     <fragment
         android:id="@+id/noDeliveryAddressFragment"
-        android:name="com.fameget.dreamgroceries.NoDeliveryAddressFragment"
+        android:name="com.company.dreamgroceries.NoDeliveryAddressFragment"
         android:label="fragment_no_delivery_address"
         tools:layout="@layout/fragment_no_delivery_address" >
         <action

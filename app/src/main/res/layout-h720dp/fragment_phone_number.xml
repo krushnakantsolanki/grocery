@@ -32,7 +32,7 @@
         app:layout_constraintGuide_percent="0.6" />
 
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:id="@+id/ivLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         android:gravity="center_horizontal"
         app:layout_constraintBottom_toTopOf="@id/guideHor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></com.fameget.dreamgroceries.customviews.CFTextView>
+        app:layout_constraintStart_toStartOf="parent"></com.company.dreamgroceries.customviews.CFTextView>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tiMob"
@@ -57,7 +57,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guideHor2">
 
-        <com.fameget.dreamgroceries.customviews.CFEditText
+        <com.company.dreamgroceries.customviews.CFEditText
             style="@style/input_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
         app:ccp_showFullName="true"
         app:layout_constraintBottom_toTopOf="@id/tiMob" />
 
-    <com.fameget.dreamgroceries.customviews.CFButton
+    <com.company.dreamgroceries.customviews.CFButton
         android:id="@+id/btnNext"
         style="@style/my_button"
         android:layout_width="wrap_content"
@@ -94,7 +94,7 @@
         android:text="@string/next"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="@id/tiMob"
-        app:layout_constraintTop_toBottomOf="@id/tiMob"></com.fameget.dreamgroceries.customviews.CFButton>
+        app:layout_constraintTop_toBottomOf="@id/tiMob"></com.company.dreamgroceries.customviews.CFButton>
 
     <ProgressBar
         android:id="@+id/progressBar2"

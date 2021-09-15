@@ -29,7 +29,7 @@
         app:layout_constraintGuide_percent="0.20" />
 
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="?android:attr/actionBarSize"
@@ -69,7 +69,7 @@
         app:layout_constraintStart_toStartOf="@id/viewDel"
         app:layout_constraintTop_toTopOf="@id/viewDel"></ImageView>
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_16"
@@ -101,7 +101,7 @@
         app:layout_constraintStart_toStartOf="@id/viewPick"
         app:layout_constraintTop_toTopOf="@id/viewPick"></ImageView>
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_16"
@@ -113,7 +113,7 @@
         app:layout_constraintTop_toTopOf="@id/viewPick" />
 
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/dp_24"
@@ -122,7 +122,7 @@
         android:textSize="@dimen/txt_20"
         app:layout_constraintBottom_toTopOf="@id/guideHo2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></com.fameget.dreamgroceries.customviews.CFTextView>
+        app:layout_constraintStart_toStartOf="parent"></com.company.dreamgroceries.customviews.CFTextView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guideHor" />
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:id="@+id/tvThanks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,9 +42,9 @@
         app:fontName="@string/font_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivThanks"></com.fameget.dreamgroceries.customviews.CFTextView>
+        app:layout_constraintTop_toBottomOf="@id/ivThanks"></com.company.dreamgroceries.customviews.CFTextView>
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:id="@+id/tvOrderSent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -54,10 +54,10 @@
         android:textSize="@dimen/txt_12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvThanks"></com.fameget.dreamgroceries.customviews.CFTextView>
+        app:layout_constraintTop_toBottomOf="@id/tvThanks"></com.company.dreamgroceries.customviews.CFTextView>
 
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:id="@+id/tvMyOrders"
         android:layout_width="match_parent"
         android:layout_height="@dimen/btn_hgt"
@@ -71,10 +71,10 @@
         android:textSize="@dimen/txt_18"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></com.fameget.dreamgroceries.customviews.CFTextView>
+        app:layout_constraintStart_toStartOf="parent"></com.company.dreamgroceries.customviews.CFTextView>
 
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:id="@+id/tvContactSupport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:id="@+id/tvQuestions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -96,10 +96,10 @@
         android:textSize="@dimen/txt_18"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tvContactSupport"
-        app:layout_constraintEnd_toEndOf="parent"></com.fameget.dreamgroceries.customviews.CFTextView>
+        app:layout_constraintEnd_toEndOf="parent"></com.company.dreamgroceries.customviews.CFTextView>
 
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:id="@+id/tvInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

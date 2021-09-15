@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".home.ui.support.SupportFragment">
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -93,14 +93,14 @@
                         app:layout_constraintTop_toTopOf="parent">
 
 
-                        <com.fameget.dreamgroceries.customviews.CFTextView
+                        <com.company.dreamgroceries.customviews.CFTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/store_name"
                             android:textColor="@color/colorAccent"
                             android:textSize="@dimen/txt_12" />
 
-                        <com.fameget.dreamgroceries.customviews.CFTextView
+                        <com.company.dreamgroceries.customviews.CFTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Dream Groceries"
@@ -156,14 +156,14 @@
                         app:layout_constraintTop_toTopOf="parent">
 
 
-                        <com.fameget.dreamgroceries.customviews.CFTextView
+                        <com.company.dreamgroceries.customviews.CFTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/store_address"
                             android:textColor="@color/colorAccent"
                             android:textSize="@dimen/txt_12" />
 
-                        <com.fameget.dreamgroceries.customviews.CFTextView
+                        <com.company.dreamgroceries.customviews.CFTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:maxLines="2"
@@ -173,13 +173,13 @@
                             android:textColor="@color/textColor"
                             android:textSize="@dimen/txt_14" />
 
-                        <com.fameget.dreamgroceries.customviews.CFTextView
+                        <com.company.dreamgroceries.customviews.CFTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingTop="@dimen/dp_8"
                             android:text="@string/get_directions"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="@dimen/txt_12"></com.fameget.dreamgroceries.customviews.CFTextView>
+                            android:textSize="@dimen/txt_12"></com.company.dreamgroceries.customviews.CFTextView>
                     </LinearLayout>
 
                     <ImageView
@@ -211,7 +211,7 @@
                     android:background="@drawable/btn_grn_bg"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <com.fameget.dreamgroceries.customviews.CFTextView
+                <com.company.dreamgroceries.customviews.CFTextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -238,7 +238,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/viewCallStore" />
 
-                <com.fameget.dreamgroceries.customviews.CFTextView
+                <com.company.dreamgroceries.customviews.CFTextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -264,7 +264,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/viewEmailStore" />
 
-                <com.fameget.dreamgroceries.customviews.CFTextView
+                <com.company.dreamgroceries.customviews.CFTextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -19,7 +19,7 @@
         app:boxStrokeColor="@color/colorPrimary"
 >
 
-        <com.fameget.dreamgroceries.customviews.CFEditText
+        <com.company.dreamgroceries.customviews.CFEditText
             android:id="@+id/edtItem"
             style="@style/input_view"
             android:layout_width="match_parent"

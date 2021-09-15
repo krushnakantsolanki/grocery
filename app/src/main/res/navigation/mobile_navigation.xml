@@ -7,24 +7,24 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.fameget.dreamgroceries.home.ui.home.HomeFragment"
+        android:name="com.company.dreamgroceries.home.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home"></fragment>
 
     <fragment
         android:id="@+id/nav_my_orders"
-        android:name="com.fameget.dreamgroceries.home.ui.orders.MyOrdersFragment"
+        android:name="com.company.dreamgroceries.home.ui.orders.MyOrdersFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_my_orders" />
 
     <fragment
         android:id="@+id/nav_profile"
-        android:name="com.fameget.dreamgroceries.home.ui.profile.ProfileFragment"
+        android:name="com.company.dreamgroceries.home.ui.profile.ProfileFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/nav_support"
-        android:name="com.fameget.dreamgroceries.home.ui.support.SupportFragment"
+        android:name="com.company.dreamgroceries.home.ui.support.SupportFragment"
         android:label="fragment_support"
         tools:layout="@layout/fragment_support" />
 </navigation>

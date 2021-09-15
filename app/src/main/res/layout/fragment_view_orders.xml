@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/order_hgt" />
 
-            <com.fameget.dreamgroceries.customviews.CFTextView
+            <com.company.dreamgroceries.customviews.CFTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingStart="@dimen/dp_16"
@@ -67,7 +67,7 @@
                 android:layout_marginEnd="@dimen/dp_8"
                 android:overScrollMode="never" />
 
-            <com.fameget.dreamgroceries.customviews.CFTextView
+            <com.company.dreamgroceries.customviews.CFTextView
                 android:id="@+id/tvItemsNotAvailable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -113,7 +113,7 @@
 
 
 
-            <com.fameget.dreamgroceries.customviews.CFTextView
+            <com.company.dreamgroceries.customviews.CFTextView
                 android:id="@+id/tvBillDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -138,7 +138,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <com.fameget.dreamgroceries.customviews.CFTextView
+                        <com.company.dreamgroceries.customviews.CFTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -147,7 +147,7 @@
                             android:textColor="@color/textColor"
                             android:textSize="@dimen/txt_16" />
 
-                        <com.fameget.dreamgroceries.customviews.CFTextView
+                        <com.company.dreamgroceries.customviews.CFTextView
                             android:id="@+id/tvSubTotal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -171,7 +171,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <com.fameget.dreamgroceries.customviews.CFTextView
+                        <com.company.dreamgroceries.customviews.CFTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -180,7 +180,7 @@
                             android:textColor="@color/textColor"
                             android:textSize="@dimen/txt_16" />
 
-                        <com.fameget.dreamgroceries.customviews.CFTextView
+                        <com.company.dreamgroceries.customviews.CFTextView
                             android:id="@+id/tvTotalTax"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -204,7 +204,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <com.fameget.dreamgroceries.customviews.CFTextView
+                        <com.company.dreamgroceries.customviews.CFTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
@@ -214,7 +214,7 @@
                             android:textSize="@dimen/txt_16"
                             app:fontName="@string/font_bold" />
 
-                        <com.fameget.dreamgroceries.customviews.CFTextView
+                        <com.company.dreamgroceries.customviews.CFTextView
                             android:id="@+id/tvTotalPrice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -231,7 +231,7 @@
                     </RelativeLayout>
                 </LinearLayout>
 
-            <com.fameget.dreamgroceries.customviews.CFTextView
+            <com.company.dreamgroceries.customviews.CFTextView
                 android:id="@+id/tvScdPickUpLbl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -244,7 +244,7 @@
                 app:fontName="@string/font_bold" />
 
 
-            <com.fameget.dreamgroceries.customviews.CFTextView
+            <com.company.dreamgroceries.customviews.CFTextView
                 android:id="@+id/tvScdValue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -263,7 +263,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvScdPickUpLbl" />
 
-            <com.fameget.dreamgroceries.customviews.CFTextView
+            <com.company.dreamgroceries.customviews.CFTextView
                 android:id="@+id/tvAChooseAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -284,7 +284,7 @@
                 android:overScrollMode="never" />
 
 
-            <com.fameget.dreamgroceries.customviews.CFTextView
+            <com.company.dreamgroceries.customviews.CFTextView
                 android:id="@+id/tvAddInst"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -295,7 +295,7 @@
                 android:textSize="@dimen/txt_14"
                 app:fontName="@string/font_bold" />
 
-            <com.fameget.dreamgroceries.customviews.CFTextView
+            <com.company.dreamgroceries.customviews.CFTextView
                 android:id="@+id/tvAddInstValue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

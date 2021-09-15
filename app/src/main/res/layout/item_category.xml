@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:paddingEnd="@dimen/dp_8">
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:id="@+id/tvCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/addOrderFragment"
-        android:name="com.fameget.dreamgroceries.addorder.fragments.AddOrderFragment"
+        android:name="com.company.dreamgroceries.addorder.fragments.AddOrderFragment"
         android:label="main_fragment"
         tools:layout="@layout/add_order_fragment">
 
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/manualOrderFragment"
-        android:name="com.fameget.dreamgroceries.addorder.fragments.ManualOrderFragment"
+        android:name="com.company.dreamgroceries.addorder.fragments.ManualOrderFragment"
         android:label="fragment_manual_order"
         tools:layout="@layout/fragment_manual_order">
         <action
@@ -55,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/schedulePickupFragment"
-        android:name="com.fameget.dreamgroceries.addorder.fragments.SchedulePickupFragment"
+        android:name="com.company.dreamgroceries.addorder.fragments.SchedulePickupFragment"
         android:label="fragment_schedule_pickup"
         tools:layout="@layout/fragment_schedule_pickup">
         <action
@@ -78,7 +78,7 @@
     </fragment>
     <fragment
         android:id="@+id/thanksFragment"
-        android:name="com.fameget.dreamgroceries.addorder.fragments.ThanksFragment"
+        android:name="com.company.dreamgroceries.addorder.fragments.ThanksFragment"
         android:label="fragment_thanks"
         tools:layout="@layout/fragment_thanks">
 
@@ -89,7 +89,7 @@
     </fragment>
     <fragment
         android:id="@+id/addAddressFragment"
-        android:name="com.fameget.dreamgroceries.home.ui.profile.AddAddressFragment"
+        android:name="com.company.dreamgroceries.home.ui.profile.AddAddressFragment"
         android:label="fragment_add_address"
         tools:layout="@layout/fragment_add_address">
         <action
@@ -113,7 +113,7 @@
     </fragment>
     <fragment
         android:id="@+id/productsFragment"
-        android:name="com.fameget.dreamgroceries.addorder.fragments.ProductsFragment"
+        android:name="com.company.dreamgroceries.addorder.fragments.ProductsFragment"
         android:label="fragment_products"
         tools:layout="@layout/fragment_products">
         <action
@@ -133,7 +133,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewCartFragment"
-        android:name="com.fameget.dreamgroceries.addorder.fragments.ViewCartFragment"
+        android:name="com.company.dreamgroceries.addorder.fragments.ViewCartFragment"
         android:label="fragment_view_cart"
         tools:layout="@layout/fragment_view_cart">
         <action
@@ -167,7 +167,7 @@
     </fragment>
     <fragment
         android:id="@+id/makePaymentFragment"
-        android:name="com.fameget.dreamgroceries.addorder.fragments.MakePaymentFragment"
+        android:name="com.company.dreamgroceries.addorder.fragments.MakePaymentFragment"
         android:label="fragment_make_payment"
         tools:layout="@layout/fragment_make_payment">
         <action
@@ -189,12 +189,12 @@
     </fragment>
     <dialog
         android:id="@+id/productDetailFragment"
-        android:name="com.fameget.dreamgroceries.addorder.fragments.ProductDetailFragment"
+        android:name="com.company.dreamgroceries.addorder.fragments.ProductDetailFragment"
         android:label="activity_product_detail"
         tools:layout="@layout/activity_product_detail" />
     <fragment
         android:id="@+id/addressListFragment"
-        android:name="com.fameget.dreamgroceries.home.ui.profile.ui.addresslist.AddressListFragment"
+        android:name="com.company.dreamgroceries.home.ui.profile.ui.addresslist.AddressListFragment"
         android:label="AddressListFragment">
         <argument
             android:name="product_list"
@@ -214,7 +214,7 @@
     </fragment>
     <fragment
         android:id="@+id/noDeliveryAddressFragment2"
-        android:name="com.fameget.dreamgroceries.NoDeliveryAddressFragment"
+        android:name="com.company.dreamgroceries.NoDeliveryAddressFragment"
         android:label="fragment_no_delivery_address"
         tools:layout="@layout/fragment_no_delivery_address" >
         <action
@@ -226,7 +226,7 @@
     </fragment>
     <fragment
         android:id="@+id/supportFragment2"
-        android:name="com.fameget.dreamgroceries.home.ui.support.SupportFragment"
+        android:name="com.company.dreamgroceries.home.ui.support.SupportFragment"
         android:label="fragment_support"
         tools:layout="@layout/fragment_support" />
 

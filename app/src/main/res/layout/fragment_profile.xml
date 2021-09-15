@@ -8,7 +8,7 @@
     tools:context=".home.ui.profile.ProfileFragment">
 
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,14 +49,14 @@
                 app:layout_constraintStart_toEndOf="@id/guideLineFirst"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <com.fameget.dreamgroceries.customviews.CFTextView
+                <com.company.dreamgroceries.customviews.CFTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/first_name"
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/txt_12" />
 
-                <com.fameget.dreamgroceries.customviews.CFTextView
+                <com.company.dreamgroceries.customviews.CFTextView
                     android:id="@+id/tvFirstName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -108,14 +108,14 @@
                 app:layout_constraintStart_toEndOf="@id/guideLineLast"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <com.fameget.dreamgroceries.customviews.CFTextView
+                <com.company.dreamgroceries.customviews.CFTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/last_name"
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/txt_12" />
 
-                <com.fameget.dreamgroceries.customviews.CFTextView
+                <com.company.dreamgroceries.customviews.CFTextView
                     android:id="@+id/tvLastName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -168,14 +168,14 @@
                 app:layout_constraintStart_toEndOf="@id/guideLineEmail"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <com.fameget.dreamgroceries.customviews.CFTextView
+                <com.company.dreamgroceries.customviews.CFTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/email"
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/txt_12" />
 
-                <com.fameget.dreamgroceries.customviews.CFTextView
+                <com.company.dreamgroceries.customviews.CFTextView
                     android:id="@+id/tvEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -228,14 +228,14 @@
                 app:layout_constraintStart_toEndOf="@id/guideLinePhone"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <com.fameget.dreamgroceries.customviews.CFTextView
+                <com.company.dreamgroceries.customviews.CFTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/phone_number"
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/txt_12" />
 
-                <com.fameget.dreamgroceries.customviews.CFTextView
+                <com.company.dreamgroceries.customviews.CFTextView
                     android:id="@+id/tvPhoneNumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -281,7 +281,7 @@
                 app:layout_constraintGuide_percent="0.1"></androidx.constraintlayout.widget.Guideline>
 
 
-            <com.fameget.dreamgroceries.customviews.CFTextView
+            <com.company.dreamgroceries.customviews.CFTextView
                 android:id="@+id/tvAddressLable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -334,7 +334,7 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.12" />
 
-            <com.fameget.dreamgroceries.customviews.CFTextView
+            <com.company.dreamgroceries.customviews.CFTextView
                 android:id="@+id/tvNot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

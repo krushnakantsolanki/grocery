@@ -59,7 +59,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <com.fameget.dreamgroceries.customviews.CFTextView
+                <com.company.dreamgroceries.customviews.CFTextView
                     android:id="@+id/tvTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
                     android:textSize="@dimen/txt_16"
                     app:layout_constraintTop_toBottomOf="@id/ivProduct" />
 
-                <com.fameget.dreamgroceries.customviews.CFTextView
+                <com.company.dreamgroceries.customviews.CFTextView
                     android:id="@+id/tvPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -80,9 +80,9 @@
                     app:fontName="@string/font_bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tvTitle"></com.fameget.dreamgroceries.customviews.CFTextView>
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle"></com.company.dreamgroceries.customviews.CFTextView>
 
-                <com.fameget.dreamgroceries.customviews.CFTextView
+                <com.company.dreamgroceries.customviews.CFTextView
                     android:id="@+id/tvDesc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
 
-        <com.fameget.dreamgroceries.customviews.CFButton
+        <com.company.dreamgroceries.customviews.CFButton
             android:id="@+id/btnAdd"
             style="@style/my_button"
             android:layout_width="wrap_content"
@@ -122,7 +122,7 @@
             app:layout_constraintEnd_toStartOf="@id/btnAdd"
             app:layout_constraintTop_toTopOf="@id/btnAdd" />
 
-        <com.fameget.dreamgroceries.customviews.CFTextView
+        <com.company.dreamgroceries.customviews.CFTextView
             android:id="@+id/tvCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

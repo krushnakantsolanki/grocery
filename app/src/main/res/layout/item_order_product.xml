@@ -51,7 +51,7 @@
             app:layout_constraintStart_toEndOf="@id/viewProduct"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.fameget.dreamgroceries.customviews.CFTextView
+            <com.company.dreamgroceries.customviews.CFTextView
                 android:id="@+id/tvProductDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.fameget.dreamgroceries.customviews.CFTextView
+            <com.company.dreamgroceries.customviews.CFTextView
                 android:id="@+id/tvQun"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
@@ -82,7 +82,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tvProductDesc" />
 
 
-            <com.fameget.dreamgroceries.customviews.CFTextView
+            <com.company.dreamgroceries.customviews.CFTextView
                 android:id="@+id/tvPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

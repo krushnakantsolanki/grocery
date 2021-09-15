@@ -23,7 +23,7 @@
             android:layout_gravity="center_horizontal"
             android:src="@drawable/ic_no_internet" />
 
-        <com.fameget.dreamgroceries.customviews.CFTextView
+        <com.company.dreamgroceries.customviews.CFTextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
             app:fontName="@string/font_semi_bold"
             tools:text="No internet connection" />
 
-        <com.fameget.dreamgroceries.customviews.CFTextView
+        <com.company.dreamgroceries.customviews.CFTextView
             android:id="@+id/tvDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
             android:textSize="@dimen/txt_14"
             app:fontName="@string/font_semi_bold" />
 
-        <com.fameget.dreamgroceries.customviews.CFButton
+        <com.company.dreamgroceries.customviews.CFButton
             android:id="@+id/btnNext"
             style="@style/my_button"
             android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
             android:text="@string/reload"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="@id/tiMob"
-            app:layout_constraintTop_toBottomOf="@id/tiMob"></com.fameget.dreamgroceries.customviews.CFButton>
+            app:layout_constraintTop_toBottomOf="@id/tiMob"></com.company.dreamgroceries.customviews.CFButton>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
     </ScrollView>
 
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:id="@+id/tvAddMoreItems"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
         app:layout_constraintBottom_toTopOf="@id/viewNext"
         app:layout_constraintStart_toStartOf="parent">
 
-        <com.fameget.dreamgroceries.customviews.CFEditText
+        <com.company.dreamgroceries.customviews.CFEditText
             android:id="@+id/edtInst"
             android:layout_width="match_parent"
             android:layout_height="120dp"
@@ -102,7 +102,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/next"

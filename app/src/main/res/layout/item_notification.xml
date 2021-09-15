@@ -28,7 +28,7 @@
         app:layout_constraintStart_toEndOf="@id/ivImage"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.fameget.dreamgroceries.customviews.CFTextView
+        <com.company.dreamgroceries.customviews.CFTextView
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,7 +38,7 @@
             android:textColor="@color/textColor"
             android:textSize="@dimen/txt_16" />
 
-        <com.fameget.dreamgroceries.customviews.CFTextView
+        <com.company.dreamgroceries.customviews.CFTextView
             android:id="@+id/tvTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

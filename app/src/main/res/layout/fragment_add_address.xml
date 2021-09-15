@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <com.fameget.dreamgroceries.customviews.CFEditText
+                    <com.company.dreamgroceries.customviews.CFEditText
                         android:id="@+id/edtLocation"
                         style="@style/input_view"
                         android:layout_width="match_parent"
@@ -126,7 +126,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/guideHor2">
 
-                <com.fameget.dreamgroceries.customviews.CFEditText
+                <com.company.dreamgroceries.customviews.CFEditText
                     android:id="@+id/edtApt"
                     style="@style/input_view"
                     android:layout_width="match_parent"
@@ -150,7 +150,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/guideHor2">
 
-                <com.fameget.dreamgroceries.customviews.CFEditText
+                <com.company.dreamgroceries.customviews.CFEditText
                     android:id="@+id/edtCity"
                     style="@style/input_view"
                     android:layout_width="match_parent"
@@ -178,7 +178,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <com.fameget.dreamgroceries.customviews.CFEditText
+                    <com.company.dreamgroceries.customviews.CFEditText
                         android:id="@+id/edtState"
                         style="@style/input_view"
                         android:layout_width="match_parent"
@@ -215,7 +215,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/guideHor2">
 
-                <com.fameget.dreamgroceries.customviews.CFEditText
+                <com.company.dreamgroceries.customviews.CFEditText
                     android:id="@+id/edtZip"
                     style="@style/input_view"
                     android:layout_width="match_parent"
@@ -225,7 +225,7 @@
                     android:textColor="@color/textColor" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.fameget.dreamgroceries.customviews.CFButton
+            <com.company.dreamgroceries.customviews.CFButton
                 android:id="@+id/btnNext"
                 style="@style/my_button"
                 android:layout_width="wrap_content"

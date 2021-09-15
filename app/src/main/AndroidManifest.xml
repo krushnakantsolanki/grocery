@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.fameget.dreamgroceries">
+    package="com.company.dreamgroceries">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:name=".MyApp"
+        android:name="com.company.dreamgroceries.MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,27 +15,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".home.ui.profile.ui.addresslist.NoDeliveryAddresActivity"></activity>
-        <activity android:name=".home.ui.support.SupportActivity" />
-        <activity android:name=".home.ui.orders.ViewOrderActivity" />
-        <activity android:name=".home.ui.profile.EnterOtpActivity" />
+        <activity android:name="com.company.dreamgroceries.home.ui.profile.ui.addresslist.NoDeliveryAddresActivity"></activity>
+        <activity android:name="com.company.dreamgroceries.home.ui.support.SupportActivity" />
+        <activity android:name="com.company.dreamgroceries.home.ui.orders.ViewOrderActivity" />
+        <activity android:name="com.company.dreamgroceries.home.ui.profile.EnterOtpActivity" />
         <activity
-            android:name=".home.ui.profile.AddressListActivity"
+            android:name="com.company.dreamgroceries.home.ui.profile.AddressListActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name=".notification.NotificationActivity"
+            android:name="com.company.dreamgroceries.notification.NotificationActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".AnimationCheckActivity" />
         <activity
-            android:name=".home.ui.orders.SchedulePickUpActivity"
+            android:name="com.company.dreamgroceries.home.ui.orders.SchedulePickUpActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".home.ui.profile.AddAddressActivity"
+            android:name="com.company.dreamgroceries.home.ui.profile.AddAddressActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".home.ui.profile.EditProfileActivity"
+            android:name="com.company.dreamgroceries.home.ui.profile.EditProfileActivity"
             android:screenOrientation="portrait" />
         <!--
 <activity
@@ -43,16 +43,16 @@
             android:theme="@style/Theme.Transparent" />
         -->
         <activity
-            android:name=".addorder.AddOrderActivity"
+            android:name="com.company.dreamgroceries.addorder.AddOrderActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".home.HomeActivity"
+            android:name="com.company.dreamgroceries.home.HomeActivity"
             android:label="@string/title_activity_home"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".login.SplashActivity"
+            android:name="com.company.dreamgroceries.login.SplashActivity"
             android:clearTaskOnLaunch="true"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
@@ -63,12 +63,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".login.LoginActivity"
+            android:name="com.company.dreamgroceries.login.LoginActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 
         <service
-            android:name=".notification.MyFirebaseMessagingService"
+            android:name="com.company.dreamgroceries.notification.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

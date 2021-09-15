@@ -7,11 +7,11 @@
 
     <activity
         android:id="@+id/addressListActivity"
-        android:name="com.fameget.dreamgroceries.home.ui.profile.AddressListActivity"
+        android:name="com.company.dreamgroceries.home.ui.profile.AddressListActivity"
         android:label="AddressListActivity" />
     <activity
         android:id="@+id/addAddressActivity"
-        android:name="com.fameget.dreamgroceries.home.ui.profile.AddAddressActivity"
+        android:name="com.company.dreamgroceries.home.ui.profile.AddAddressActivity"
         android:label="activity_add_address"
         tools:layout="@layout/activity_add_address" />
 </navigation>

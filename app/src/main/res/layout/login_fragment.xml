@@ -63,7 +63,7 @@
             app:layout_constraintStart_toStartOf="@id/llLogin"
             app:layout_constraintTop_toTopOf="@id/llLogin"></ImageView>
 
-        <com.fameget.dreamgroceries.customviews.CFTextView
+        <com.company.dreamgroceries.customviews.CFTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_16"

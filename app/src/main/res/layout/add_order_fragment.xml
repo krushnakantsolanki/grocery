@@ -67,14 +67,14 @@
         app:layout_constraintStart_toStartOf="@id/tvQuickOrder"
         app:layout_constraintTop_toTopOf="@id/viewBrowseStore">
 
-        <com.fameget.dreamgroceries.customviews.CFTextView
+        <com.company.dreamgroceries.customviews.CFTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/browse_store_items"
             android:textColor="@color/white"
             android:textSize="@dimen/txt_btn" />
 
-        <com.fameget.dreamgroceries.customviews.CFTextView
+        <com.company.dreamgroceries.customviews.CFTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/use_shop_cart"
@@ -104,7 +104,7 @@
         app:layout_constraintBottom_toBottomOf="@id/viewQuickOrder"
         app:layout_constraintTop_toTopOf="@id/viewQuickOrder"></ImageView>
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:id="@+id/tvQuickOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -117,7 +117,7 @@
         app:layout_constraintTop_toTopOf="@id/viewQuickOrder" />
 
 
-    <com.fameget.dreamgroceries.customviews.CFTextView
+    <com.company.dreamgroceries.customviews.CFTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/dp_40"
@@ -127,7 +127,7 @@
         android:gravity="center_horizontal"
         app:layout_constraintBottom_toTopOf="@id/guideHo2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></com.fameget.dreamgroceries.customviews.CFTextView>
+        app:layout_constraintStart_toStartOf="parent"></com.company.dreamgroceries.customviews.CFTextView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
