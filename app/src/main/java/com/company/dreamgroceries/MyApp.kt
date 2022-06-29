@@ -1,12 +1,9 @@
 package com.company.dreamgroceries
 
-import android.R.attr.apiKey
 import android.app.Activity
 import android.app.Application
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.room.Room
-import com.company.dreamgroceries.base.BaseActivity
 import com.company.dreamgroceries.customviews.CustomProgressDialog
 import com.company.dreamgroceries.data.local.AppDB
 import com.company.dreamgroceries.di.AppComponent

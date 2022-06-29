@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import com.company.dreamgroceries.R
-import com.company.dreamgroceries.home.ui.profile.AddAddressFragment
-import com.company.dreamgroceries.utilities.BUN_1
 
 class SupportActivity : AppCompatActivity() {
 

@@ -1,7 +1,5 @@
 package com.company.dreamgroceries.data
 
-import kotlinx.android.parcel.Parcelize
-
 
 data class UpdateProfilePhone(
     var country_code: String,

@@ -1,7 +1,6 @@
 package com.company.dreamgroceries.di
 
 import android.content.Context
-import com.company.dreamgroceries.BuildConfig
 import com.company.dreamgroceries.webservices.ApiService
 import com.company.dreamgroceries.webservices.NetworkInterceptor
 import dagger.Module

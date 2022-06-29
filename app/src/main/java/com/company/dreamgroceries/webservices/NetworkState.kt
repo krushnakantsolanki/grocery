@@ -16,8 +16,6 @@
 
 package com.company.dreamgroceries.webservices
 
-import com.google.android.gms.location.DetectedActivity.RUNNING
-
 enum class NetStatus {
     EMPTY,
     RUNNING,

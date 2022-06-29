@@ -1,7 +1,6 @@
 package com.company.dreamgroceries.home.ui.profile
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.company.dreamgroceries.R
 import com.company.dreamgroceries.base.BaseActivity
 import com.company.dreamgroceries.home.ui.profile.ui.addresslist.AddressListFragment

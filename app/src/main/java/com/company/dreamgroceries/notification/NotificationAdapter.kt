@@ -9,7 +9,6 @@ import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.company.dreamgroceries.R
-import com.company.dreamgroceries.customviews.CFTextView
 import com.company.dreamgroceries.data.NotificationData
 import com.company.dreamgroceries.extensions.toFormattedDate
 import com.company.dreamgroceries.utilities.*

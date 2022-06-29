@@ -1,7 +1,6 @@
 package com.company.dreamgroceries.data
 
 import com.company.dreamgroceries.utilities.ORDER_MANUAL_DELIVERY
-import com.company.dreamgroceries.utilities.ORDER_MANUAL_PICKUP
 import com.company.dreamgroceries.utilities.PAYMENT_COD
 
 data class ManualDelOrderReq(

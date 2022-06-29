@@ -15,7 +15,6 @@ import com.company.dreamgroceries.R
 import com.company.dreamgroceries.di.AppComponent
 import com.company.dreamgroceries.utilities.Utils
 import com.google.android.gms.common.api.ApiException
-import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.tasks.Task
 import com.google.android.libraries.places.api.Places
 import com.google.android.libraries.places.api.model.Place

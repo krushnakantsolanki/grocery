@@ -10,7 +10,6 @@ import android.widget.LinearLayout
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.navigation.findNavController
 import com.company.dreamgroceries.R
 import com.company.dreamgroceries.addorder.ManualOrderViewModel
 import com.company.dreamgroceries.customviews.CFEditText

@@ -4,8 +4,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.paging.DataSource
 import com.company.dreamgroceries.data.Order
 import com.company.dreamgroceries.data.PageReq
-import com.company.dreamgroceries.data.Product
-import com.company.dreamgroceries.data.ProductsRequest
 
 
 class OderSourceFactory(val pageReq: PageReq) :

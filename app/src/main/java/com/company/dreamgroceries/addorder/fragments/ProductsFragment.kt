@@ -9,12 +9,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
-import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Observer
 import androidx.lifecycle.coroutineScope
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.company.dreamgroceries.R
@@ -25,7 +23,6 @@ import com.company.dreamgroceries.data.CategoryResponse
 import com.company.dreamgroceries.data.Product
 import com.company.dreamgroceries.databinding.FragmentProductsBinding
 import com.company.dreamgroceries.extensions.getViewModelFactory
-import com.company.dreamgroceries.extensions.hideKeyboard
 import com.company.dreamgroceries.home.ui.orders.CategoriesAdapter
 import com.company.dreamgroceries.home.ui.orders.CategoryClickListener
 import com.company.dreamgroceries.home.ui.orders.ProductClickListener

@@ -16,7 +16,6 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.navigation.findNavController
 import com.company.dreamgroceries.MyApp
 import com.company.dreamgroceries.R
 import com.company.dreamgroceries.base.BaseFragment

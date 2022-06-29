@@ -11,8 +11,6 @@ import com.company.dreamgroceries.base.BaseActivity
 import com.company.dreamgroceries.data.*
 import com.company.dreamgroceries.databinding.ActivityEditProfileBinding
 import com.company.dreamgroceries.extensions.getViewModelFactory
-import com.company.dreamgroceries.extensions.isTilEmpty
-import com.company.dreamgroceries.extensions.isTilValidEmail
 import com.company.dreamgroceries.utilities.BUN_1
 import com.company.dreamgroceries.utilities.REQUEST_CHANGE_PHONE
 import com.company.dreamgroceries.utilities.Utils

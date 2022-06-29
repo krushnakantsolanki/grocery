@@ -2,7 +2,6 @@ package com.company.dreamgroceries.base
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
-import androidx.lifecycle.map
 import com.company.dreamgroceries.webservices.Resource
 import com.company.dreamgroceries.webservices.Status
 import kotlinx.coroutines.Dispatchers

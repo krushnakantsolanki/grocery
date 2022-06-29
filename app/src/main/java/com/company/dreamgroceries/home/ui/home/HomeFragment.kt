@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
 import com.company.dreamgroceries.R
 import com.company.dreamgroceries.addorder.AddOrderActivity
 import com.company.dreamgroceries.databinding.FragmentHomeBinding

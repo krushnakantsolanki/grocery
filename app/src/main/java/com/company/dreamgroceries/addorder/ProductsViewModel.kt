@@ -13,7 +13,6 @@ import com.company.dreamgroceries.home.ui.orders.ProductSourceFactory
 import com.company.dreamgroceries.utilities.PreferenceHelper
 import com.company.dreamgroceries.webservices.NetworkState
 import com.company.dreamgroceries.webservices.Resource
-import com.google.android.libraries.places.api.model.Place
 
 
 class ProductsViewModel(private val productsRepo: ProductsRepo) : ViewModel() {

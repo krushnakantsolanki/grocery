@@ -10,7 +10,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.company.dreamgroceries.R
 import com.company.dreamgroceries.addorder.AddOrderActivity
@@ -19,7 +18,6 @@ import com.company.dreamgroceries.base.BaseFragment
 import com.company.dreamgroceries.data.PlaceOrderResponse
 import com.company.dreamgroceries.databinding.FragmentSchedulePickupBinding
 import com.company.dreamgroceries.extensions.getViewModelFactory
-import com.company.dreamgroceries.extensions.isTilEmpty
 import com.company.dreamgroceries.home.ui.orders.SchedulePickUpActivity
 import com.company.dreamgroceries.utilities.BUN_1
 import com.company.dreamgroceries.utilities.Utils

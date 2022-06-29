@@ -12,7 +12,6 @@ import androidx.navigation.fragment.navArgs
 import com.company.dreamgroceries.R
 import com.company.dreamgroceries.customviews.CFTextView
 import com.company.dreamgroceries.databinding.FragmentThanksBinding
-import com.company.dreamgroceries.home.ui.profile.AddAddressFragmentArgs
 import com.company.dreamgroceries.utilities.BUN_1
 import com.company.dreamgroceries.utilities.BUN_2
 import com.company.dreamgroceries.utilities.ORD_DILVRY

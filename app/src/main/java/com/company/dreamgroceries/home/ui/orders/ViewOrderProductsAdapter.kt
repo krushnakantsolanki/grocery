@@ -8,13 +8,11 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.company.dreamgroceries.R
 import com.company.dreamgroceries.data.OrderProduct
-import com.company.dreamgroceries.data.Product
 import com.company.dreamgroceries.extensions.loadImage
 import com.company.dreamgroceries.utilities.CURR
 import kotlinx.android.synthetic.main.item_order_product.view.*
 import kotlinx.android.synthetic.main.item_product.view.ivProduct
 import kotlinx.android.synthetic.main.item_product.view.tvPrice
-import kotlinx.android.synthetic.main.item_view_product.view.*
 import kotlinx.android.synthetic.main.item_view_product.view.tvProductDesc
 
 class ViewOrderProductsAdapter :

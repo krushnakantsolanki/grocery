@@ -13,7 +13,6 @@ import com.company.dreamgroceries.R
 import com.company.dreamgroceries.customviews.CFTextView
 import com.company.dreamgroceries.data.BaseResponse
 import com.company.dreamgroceries.data.Product
-import com.company.dreamgroceries.data.SocialLoginResponse
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import okhttp3.ResponseBody

@@ -13,7 +13,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.company.dreamgroceries.MyApp
 import com.company.dreamgroceries.R
@@ -24,7 +23,6 @@ import com.company.dreamgroceries.data.Addresse
 import com.company.dreamgroceries.data.PlaceOrderResponse
 import com.company.dreamgroceries.databinding.FragmentAddAddressBinding
 import com.company.dreamgroceries.extensions.getViewModelFactory
-import com.company.dreamgroceries.extensions.isTilEmpty
 import com.company.dreamgroceries.home.ui.profile.ui.addresslist.NoDeliveryAddresActivity
 import com.company.dreamgroceries.home.ui.support.SupportActivity
 import com.company.dreamgroceries.utilities.BUN_1
